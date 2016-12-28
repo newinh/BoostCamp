@@ -1,5 +1,5 @@
 # [Udacity](https://www.udacity.com) with [BoostCamp](http://boostcamp.connect.or.kr) 
- ~~사실 MarkDown 연습용~~
+ ~~*사실 MarkDown 연습용*~~
 
 
 ![BoostCamp Logo](https://github.com/newinh/Udacity/blob/master/bc_img.png)
