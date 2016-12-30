@@ -1,4 +1,5 @@
-# [Udacity](https://www.udacity.com) with [BoostCamp](http://boostcamp.connect.or.kr) 
+# [Udacity](https://www.udacity.com) with [BoostCamp](http://boostcamp.connect.or.kr)
+ __진도표__
  ~~*사실 MarkDown 연습용*~~
 
 
@@ -14,4 +15,14 @@
 
 ### - UIkit Fundamentals [[링크]](https://www.udacity.com/course/uikit-fundamentals--ud788) ( 1/15 ~ 1/28)
 
-###- Swift Programming Syntax
+###- Swift Programming Syntax [[링크]](https://www.udacity.com/course/learn-swift-programming-syntax--ud902)
+
+ - [x] Lesson1 Swift Basics (12/30)
+ - [ ] Lesson2 Optionals
+ - [ ] Lesson3 Collections
+ - [ ] Lesson4 Control Flow
+ - [ ] Lesson5 Funcions
+ - [ ] Lesson6 Classes, Properties, and Methods
+ - [ ] Lesson7 Enums and Structs
+ - [ ] Lesson8 Protocols and Extensions
+ - [ ] Lesson9 Closure Expressions
