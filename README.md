@@ -1,7 +1,5 @@
 # [Udacity](https://www.udacity.com) with [BoostCamp](http://boostcamp.connect.or.kr)
- __진도표__
- 
- ~~*사실상 MarkDown 연습용*~~
+ ####__진도표__  ~~*(사실상 MarkDown 연습용)*~~
 
 
 ![BoostCamp Logo](https://github.com/newinh/Udacity/blob/master/bc_img.png)
