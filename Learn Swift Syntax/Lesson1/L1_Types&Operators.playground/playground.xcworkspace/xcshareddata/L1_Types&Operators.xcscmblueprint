@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "4FBFC499B62D73734F68F4A08E1393DB5516C7D0",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "4FBFC499B62D73734F68F4A08E1393DB5516C7D0" : 9223372036854775807,
+    "9304E101FEC4EDA174698D76E1ECDC4B0ECCBA89" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "FB94737B-99E1-4547-8F40-FCE524E47BCC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "4FBFC499B62D73734F68F4A08E1393DB5516C7D0" : "ios-nd-swift-syntax\/",
+    "9304E101FEC4EDA174698D76E1ECDC4B0ECCBA89" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "L1_Types&Operators",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Lesson1\/L1_Types&Operators.playground",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/udacity\/ios-nd-swift-syntax.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4FBFC499B62D73734F68F4A08E1393DB5516C7D0"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/newinh\/Udacity.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9304E101FEC4EDA174698D76E1ECDC4B0ECCBA89"
+    }
+  ]
+}
