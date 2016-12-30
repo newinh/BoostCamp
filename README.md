@@ -1,5 +1,5 @@
 # [Udacity](https://www.udacity.com) with [BoostCamp](http://boostcamp.connect.or.kr)
- ####__진도표__  ~~*(사실상 MarkDown 연습용)*~~
+ #### __진도표__  ~~*(사실상 MarkDown 연습용)*~~
 
 
 ![BoostCamp Logo](https://github.com/newinh/Udacity/blob/master/bc_img.png)
@@ -14,7 +14,7 @@
 
 ### - UIkit Fundamentals [[링크]](https://www.udacity.com/course/uikit-fundamentals--ud788) ( 1/15 ~ 1/28)
 
-###- Swift Programming Syntax [[링크]](https://www.udacity.com/course/learn-swift-programming-syntax--ud902)
+### - Swift Programming Syntax [[링크]](https://www.udacity.com/course/learn-swift-programming-syntax--ud902)
 
  - [x] Lesson1 Swift Basics (12/30)
  - [ ] Lesson2 Optionals
