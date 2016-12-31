@@ -7,7 +7,7 @@
 ### - Intro to iOS App Development with Swift [[링크]](https://www.udacity.com/course/intro-to-ios-app-development-with-swift--ud585) ( 12/28 ~ 1/14)
 
  - [x] Lesson1 introduction & Xcode (12/28) 
- - [x] Lesson2 AutoLayout & Buttons
+ - [x] Lesson2 AutoLayout & Buttons (12/31)
  - [ ] Lesson3 ViewController and Multiple Views
  - [ ] Lesson4 Delegation and recording
  - [ ] Lesson5 Playback and Effects
