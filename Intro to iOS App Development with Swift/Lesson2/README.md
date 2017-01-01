@@ -3,7 +3,7 @@
 
 - AutoLayout
 - IBOutlet & IBAction
-![IBOutlet & IBAction] ()
+![IBOutlet & IBAction] (https://github.com/newinh/Udacity/blob/master/Intro%20to%20iOS%20App%20Development%20with%20Swift/Lesson2/IBOutlet%26IBAction.png)
 
 #### Understanding AutoLayout
 > Auto Layout dynamically calculates the size and position of all the views in your view hierarchy, based on constraints placed on those views. For example, you can constrain a button so that it is horizontally centered with an Image view and so that the button’s top edge always remains 8 points below the image’s bottom. If the image view’s size or position changes, the button’s position automatically adjusts to match. 
@@ -63,11 +63,12 @@ Constrain를 적용하여 각 뷰들의 위치를 고정한다..!
 
 Table 3-1
 
-View | Intrinsic content size
-UIView and NSView | No intrinsic content size.
-Sliders | Defines only the width (iOS). Defines the width, the height, or both—depending on the slider’s type (OS X).
-Labels, buttons, switches, and text fields | Defines both the height and the width.
-Text views and image views | Intrinsic content size can vary.
+| View                                       | Intrinsic content size                                                                                       |
+|--------------------------------------------|--------------------------------------------------------------------------------------------------------------|
+| UIView and NSView                          | No intrinsic content size                                                                                    |
+| Sliders                                    | Defines only the width (iOS).  Defines the width, the height, or both—depending on the slider’s type (OS X). |
+| Labels, buttons, switches, and text fields | Defines both the height and the width                                                                        |
+| Text views and image views                 | Intrinsic content size can vary.                                                                             |
 
 
 #### Hugging & Compression
