@@ -84,10 +84,10 @@ NSSring library를 쓸수있다.
 
  두가지 변수 선언 방법이 있다.
 
-'''
-let birthYear = 2008
-var currentYear = 2015
-'''
+
+    let birthYear = 2008
+    var currentYear = 2015
+
 
 let 은 상수형으로 한번 선언하면 바꿀수 없다. 
 
