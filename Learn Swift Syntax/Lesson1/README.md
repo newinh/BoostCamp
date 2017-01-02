@@ -20,7 +20,7 @@ var x : Int = 43
 ;(세미콜론) 이 필요없다!
 
 
-'''
+'''{.swift}
 var x = 12
 var y = "Hi"
 var z = 3.141592
