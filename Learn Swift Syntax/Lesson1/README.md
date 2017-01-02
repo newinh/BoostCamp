@@ -19,18 +19,9 @@
 ;(세미콜론) 이 필요없다!
 [!Tip]
 
-
-<<<<<<< HEAD
     var x = 12
     var y = "Hi"
     var z = 3.141592
-=======
-'''{.swift}
-var x = 12
-var y = "Hi"
-var z = 3.141592
-'''
->>>>>>> origin/master
 
 심지어 변수타입을 입력할 필요도 없다! Compiler가 변수타입을 추론하여 x, y, z 는 각각 Int, String, Double형이 된다. (실수 기본형은 Double)
 
