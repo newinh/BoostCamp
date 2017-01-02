@@ -13,11 +13,11 @@
 
     var x : Int = 43
 
-[Tip]
+[[Tip]]
 변수타입을 나중에 적는다!
 
 ;(세미콜론) 이 필요없다!
-[!Tip]
+[[/Tip]]
 
     var x = 12
     var y = "Hi"
@@ -27,7 +27,7 @@
 
 Character형도 ""로 표시
 
-#### if문
+### if문
 
     var flag = true
     
@@ -35,7 +35,7 @@ Character형도 ""로 표시
         print("flag is true.")
     }
 
-#### ternary condition operator
+### ternary condition operator
 
     question? A1 : A2
 
@@ -44,8 +44,8 @@ Character형도 ""로 표시
 
 ## String
 
-#### Emoji
- 'ctrl' + 'cmd' + 'space bar'로 emoji 입력가능ㅋ,ㅋ😗
+### Emoji
+ `ctrl` + `cmd` + `space bar`로 emoji 입력가능ㅋ,ㅋ😗
 
 
 #### String Interpolation
@@ -56,9 +56,9 @@ Character형도 ""로 표시
 > 출력결과 : Ferris eats 25lbs of dog food per month
 
 
- [Tip]
-**\(변수명)**
-[!Tip]
+ [[Tip]]
+**`\(변수명)`**
+[[/Tip]]
 
 #### for-in 문 & Sting.characters
 
