@@ -11,20 +11,26 @@
 
 #### 변수 선언 방법
 
-''' 
-var x : Int = 43
-'''
+    var x : Int = 43
 
+[Tip]
 변수타입을 나중에 적는다!
 
 ;(세미콜론) 이 필요없다!
+[!Tip]
 
 
-'''
+<<<<<<< HEAD
+    var x = 12
+    var y = "Hi"
+    var z = 3.141592
+=======
+'''{.swift}
 var x = 12
 var y = "Hi"
 var z = 3.141592
 '''
+>>>>>>> origin/master
 
 심지어 변수타입을 입력할 필요도 없다! Compiler가 변수타입을 추론하여 x, y, z 는 각각 Int, String, Double형이 된다. (실수 기본형은 Double)
 
@@ -48,7 +54,7 @@ Character형도 ""로 표시
 ## String
 
 #### Emoji
- ctrl + cmd + space 로 emoji 입력가능ㅋ,ㅋ😗
+ 'ctrl' + 'cmd' + 'space bar'로 emoji 입력가능ㅋ,ㅋ😗
 
 
 #### String Interpolation
@@ -56,10 +62,12 @@ Character형도 ""로 표시
     var dogName = "Ferris"
     doggyDiet = "\(dogName) eats 25lbs of dog food per month"
 
-> Ferris eats 25lbs of dog food per month
+> 출력결과 : Ferris eats 25lbs of dog food per month
 
 
- **\(변수명)**
+ [Tip]
+**\(변수명)**
+[!Tip]
 
 #### for-in 문 & Sting.characters
 
