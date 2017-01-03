@@ -110,7 +110,9 @@ var myButton: UIButton!
 
 ## Optional Chaining
 
- 말로 설명을 잘 못하겠다...예제를 통해 확인하자
+ 아직 내공이 부족해서 잘 설명을 못하겠다.   
+`.`을 통해 클래스의 속성을 가져올때 `?`를 이용해서 unwrapping하면서 가져오는것같다...예제를 통해 확인하자
+ 
 ```swift
 // Example 1
 var anotherImageView = UIImageView()
@@ -143,7 +145,54 @@ if let tailLength = animal.tail?.length {
 
 ## Downcasting with as? and as!
 
+ 마찬가지로...예제를 통해 쓰임새만 알아두자.
 
+
+``` swift
+var drinkChoices = [
+    HotDrink(category: "coffee", pairing: "biscotti"),
+    HotDrink(category: "tea", pairing: "crumpets"),
+    ColdDrink(category: "lemonade", vessel: "glass"),
+    ColdDrink(category: "beer", vessel: "frosty mug")
+    ]
+
+
+// Generic drink offer
+for beverage in drinkChoices {
+    print ("Can I get you a \(beverage.category)")
+}
+
+
+
+// Specific drink offer
+// Downcasting with as?
+
+for beverage in drinkChoices {
+    if let coldDrink = beverage as? ColdDrink {
+
+        print ("Can I offer you a \(coldDrink.vessel) of \(coldDrink.category)?")
+
+    } else if let hotDrink = beverage as? HotDrink {
+
+        print ("Can I get you some \(hotDrink.category) with \(hotDrink.pairing)?")
+    }
+}
+
+
+// Downcasting with as!
+
+var coffeeArray: [Beverage] = [
+    HotDrink(category: "coffee", pairing: "biscotti"),
+    HotDrink(category: "coffee", pairing: "scones"),
+    HotDrink(category: "coffee", pairing: "biscotti"),
+    ]
+
+for beverage in coffeeArray {
+    let hotDrink = beverage as! HotDrink
+    print ("Can I get you some \(hotDrink.category) with \(hotDrink.pairing)?")
+    }
+}
+```
 
 
 
