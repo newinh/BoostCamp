@@ -109,11 +109,37 @@ var myButton: UIButton!
 
 ## Optional Chaining
 
+ 말로 설명을 잘 못하겠다...예제를 통해 확인하자
+```swift
+// Example 1
+var anotherImageView = UIImageView()
+anotherImageView.image = UIImage(named:"puppy_in_box")
+
+var size = anotherImageView.image?.size
+
+if let imageSize = anotherImageView.image?.size {
+print("Here's the image size: \(imageSize)")
+} else {
+print("This image hasn't been set.")
+}
 
 
+// Example 2
+
+var animal = Animal(name: "Lenny", species: "lemur", tailLength: 12)
+
+animal = Animal(name: "Gilbert", species: "Gorilla", tailLength: nil )
+
+if let tailLength = animal.tail?.length {
+print("\(animal.name)'s tail is \(tailLength) long")
+} else {
+print("\(animal.name) doesn't have a tail.")
+}```
+
+`?`를 주목하자!
 
 
-
+## Downcasting with as? and as!
 
 
 
