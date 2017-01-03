@@ -188,9 +188,11 @@ var coffeeArray: [Beverage] = [
     ]
 
 for beverage in coffeeArray {
+
     let hotDrink = beverage as! HotDrink
+
     print ("Can I get you some \(hotDrink.category) with \(hotDrink.pairing)?")
-    }
+    
 }
 ```
 
