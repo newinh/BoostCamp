@@ -5,7 +5,7 @@
 
 ## Overview
 
-optional이란 `nil`값을 가질 **수**도 있는 변수를 말한다. 즉 optional이 선언된 변수는 `nil`일수도 있고 value를 가지고 있을수도 있는 녀석~*(간잽이)*~이다.
+optional이란 `nil`값을 가질 **수**도 있는 변수를 말한다. 즉 optional이 선언된 변수는 `nil`일수도 있고 value를 가지고 있을수도 있는 녀석~~*(간잽이)*~~이다.
 
 #### Why Optional?
 swift에서는 기본 타입에  `nil` 값을 넣을 수 없기 때문!  
@@ -67,6 +67,7 @@ if let intValue = zee {
     "No value"
 }
 ```
+`if` 문에서 선언한 intValue는 `nil` 이 들어갈 수 없는 기본 변수 이므로 zee가 `nil`일 경우 else문으로 빠진다 
 
 
 아래는 `if let`의 style guide
@@ -86,13 +87,13 @@ var optionalSubview: UIView?
 var volume: Double?
 
 if let unwrappedSubview = optionalSubview {
-if let realVolume = volume {
-    // do something with unwrappedSubview and realVolume
-}
+    if let realVolume = volume {
+        // do something with unwrappedSubview and realVolume
+    }
 }
 ```
 
-## Implicitly Unwrapped Optionals
+## Implicitly Unwrapped Optionals (forced-unwrapping)
  `!` 를 사용했을 경우에는 좀 더 편하게 변수를 사용할 수 있다.  
 __그러나 optioanl 변수가 `nil`값을 가지고 있을 경우 error를 일으킨다!__
 
@@ -118,9 +119,9 @@ anotherImageView.image = UIImage(named:"puppy_in_box")
 var size = anotherImageView.image?.size
 
 if let imageSize = anotherImageView.image?.size {
-print("Here's the image size: \(imageSize)")
+    print("Here's the image size: \(imageSize)")
 } else {
-print("This image hasn't been set.")
+    print("This image hasn't been set.")
 }
 
 
@@ -131,10 +132,11 @@ var animal = Animal(name: "Lenny", species: "lemur", tailLength: 12)
 animal = Animal(name: "Gilbert", species: "Gorilla", tailLength: nil )
 
 if let tailLength = animal.tail?.length {
-print("\(animal.name)'s tail is \(tailLength) long")
+    print("\(animal.name)'s tail is \(tailLength) long")
 } else {
-print("\(animal.name) doesn't have a tail.")
-}```
+    print("\(animal.name) doesn't have a tail.")
+}
+```
 
 `?`를 주목하자!
 
