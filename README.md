@@ -17,7 +17,7 @@
 ### - Swift Programming Syntax [[링크]](https://www.udacity.com/course/learn-swift-programming-syntax--ud902)
 
  - [x] Lesson1 Swift Basics (12/30)
- - [ ] Lesson2 Optionals
+ - [x] Lesson2 Optionals (1/3)
  - [ ] Lesson3 Collections
  - [ ] Lesson4 Control Flow
  - [ ] Lesson5 Funcions
