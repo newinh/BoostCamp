@@ -12,7 +12,7 @@ viewDidLoad는 viewController 클래스가 메모리에 적재되었을 때 호�
 
 
 ### view Controller life cycle
-![life cycle] ()
+![life cycle] (./view Controller life cycle.png)
 
 
 event가 발생하기 전에 will fuction이 호출되고 event 발생 후에 did function이 호출된다. 
