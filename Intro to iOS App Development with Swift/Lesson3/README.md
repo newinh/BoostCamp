@@ -17,13 +17,14 @@ viewDidLoad는 viewController 클래스가 메모리에 적재되었을 때 호�
 
 event가 발생하기 전에 will fuction이 호출되고 event 발생 후에 did function이 호출된다. 
 
-Remember that veiw and view controller are linked. UIViewController안에 있는 모든 subclass들은 적어도 하나의 UIView와 함께가는 IBOutlet을 가지고있다.
-
+Remember that veiw and view controller are linked. UIViewController안에 있는 모든 subclass들은 적어도 하나의 UIView와 함께가는 IBOutlet을 가지고있다.(?)
+=================
 ![add IBOutlet](./add IBOutlet.png)
 main.storyboard에서 `ctrl` + `drag` 를 통해 IBOutlet 추가
 
 ![add image](./add image in Assets.png)
-
+Assets에 image 추가
+=====================
 
 ## 10. How to enable or disable a UI Button
 
@@ -49,13 +50,15 @@ override func viewDidLoad() {
 
  UINavigationContoller는 여러 view controller들을 담는 스택을 다루는 클래스이다.
 
+
+
 ![UINC](./UINavigationController.png)
 
 rootViewController부터 시작해서 여러 view controller들을 스택에 쌓을 수 있다!
 
 
 
-![initial view controller](./Initial View Controller.png)
+![initial view controller](./Initial ViewController.png)
 
 Storyboard 에서 회색 화살표가 가르키거나 Attributes inspector에서 *is Initial View Controller*가 체크되어 있는 뷰가 가장 처음 보게 될 뷰이다. 이것이 설정되어 있지 않다면 **Runtime Error!**
 
@@ -64,7 +67,7 @@ Storyboard 에서 회색 화살표가 가르키거나 Attributes inspector에서
  UINavigationController 생성. 요놈이 이제 inital view Controller가 된다.
 
 
-![root view] (./root view.png)
+![root view] (./root view.png)  
  이 아이콘이 UINavigationController에 대한 root view임을 나타낸다.
 
 
