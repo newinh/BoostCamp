@@ -8,7 +8,7 @@
 
  - [x] Lesson1 introduction & Xcode (12/28) 
  - [x] Lesson2 AutoLayout & Buttons (12/31)
- - [ ] Lesson3 ViewController and Multiple Views
+ - [x] Lesson3 ViewController and Multiple Views (1/3)
  - [ ] Lesson4 Delegation and recording
  - [ ] Lesson5 Playback and Effects
 
