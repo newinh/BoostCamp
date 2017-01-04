@@ -18,8 +18,8 @@
 
  - [x] Lesson1 Swift Basics (12/30)
  - [x] Lesson2 Optionals (1/3)
- - [ ] Lesson3 Collections
- - [ ] Lesson4 Control Flow
+ - [x] Lesson3 Collections (1/4)
+ - [x] Lesson4 Control Flow (1/4)
  - [ ] Lesson5 Funcions
  - [ ] Lesson6 Classes, Properties, and Methods
  - [ ] Lesson7 Enums and Structs
