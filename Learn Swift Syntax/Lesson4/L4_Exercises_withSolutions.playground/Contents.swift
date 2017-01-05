@@ -45,7 +45,7 @@ for (name, digits) in rapperPhoneNumbers {
 //: ## Switch Statements
 //: Translate the following if-else statements into switch statements. Feel free to modify print statements as desired.
 //: ### Exercise 5
-// Below is an if statement determining what team to cheer for given a sport.
+//:Below is an if statement determining what team to cheer for given a sport.
 enum Sport {
     case baseball, basketball, football, hockey, soccer
 }
@@ -80,7 +80,7 @@ case .soccer:
     print("Go Earthquakes")
 }
 //: ### Exercise 6
-// Below is an enum and an if-else statement for implementing the game Rock-Paper-Scissors.
+//: Below is an enum and an if-else statement for implementing the game Rock-Paper-Scissors.
 enum RoshamboMove {
     case rock, paper, scissors
 }
@@ -111,12 +111,14 @@ case (.rock, .scissors), (.scissors, .rock):
 case (.paper, .scissors), (.scissors, .paper):
     resultsMessage = "Scissors cut Paper."
 }
+type(of: myMove)
 
 // Alternate solution
 switch (myMove, yourMove) {
 case (.rock, .paper), (.paper, .rock):
     resultsMessage = "Paper covers Rock."
 case let (a, b) where a==b :
+    type(of: a)
     resultsMessage = "It's a tie!"
 case (.rock, .scissors), (.scissors, .rock):
     resultsMessage = "Rock crushes Scissors."
