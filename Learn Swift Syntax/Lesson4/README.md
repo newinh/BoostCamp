@@ -3,15 +3,17 @@
 ## for & for-in
 
 ```swift
-for var index = 99; index > 0; --index{
-    print("\(99-index) bottles of beer on the wall. \(99-index) bottles of beer. Take one down, pass it around ...")
-}
+//for var index = 99; index > 0; --index{
+//    print("\(99-index) bottles of beer on the wall. \(99-index) bottles of beer. Take one down, pass it around ...")
+//}
 
 
 for index in 0..<99 {
 print("\(99-index) bottles of beer on the wall. \(99-index) bottles of beer. Take one down, pass it around ...")
 }
 ```
+
+**첫번째 형식은 Swift3에서 사라졌다..!**
 
 
 > for item in Collection {
