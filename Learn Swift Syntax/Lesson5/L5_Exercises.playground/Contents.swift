@@ -9,7 +9,7 @@ import UIKit
 //:Test out your discovery below by returning the last letter of the String, "bologna".
 var word = "bologna"
 
-
+word.endIndex
 word.distance(from: word.startIndex, to: word.endIndex)
 word.remove(at: word.index(before: word.endIndex))
 word.startIndex
@@ -25,7 +25,7 @@ func combineLastCharacters(inputStringArray : [String]) -> String {
     
     var newString : String = ""
     
-    for string in nonsenseArray {
+    for string in inputStringArray {
         
         var str = string
         newString = newString  + "\(str.remove(at: str.index(before: str.endIndex)))"
@@ -36,6 +36,8 @@ func combineLastCharacters(inputStringArray : [String]) -> String {
 }
 
 print (combineLastCharacters(inputStringArray: nonsenseArray))
+
+
 
 //: __Problem 3__
 //:
@@ -72,6 +74,21 @@ isPrice(price: "34")
 //: __3b.__ Write a for-in loop that checks each character of a string to see if it is a member of the "digits" set. Use the .unicodeScalars property to access all the characters in a string. Hint: the method longCharacterIsMember may come in handy.
 
 let digits = CharacterSet.decimalDigits
+
+
+// real solution
+
+func digitsOnly(_ word: String) -> Bool {
+    
+    for character in word.unicodeScalars {
+        if !digits.contains(UnicodeScalar(character.value)!) {
+            return false
+        }
+    }
+    return true
+}
+
+digitsOnly("33")
 //: __Problem 4__
 //:
 //: Write a function that takes in an array of dirtyWord strings, removes all of the four-letter words, and returns a clean array.

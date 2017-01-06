@@ -20,7 +20,7 @@
  - [x] Lesson2 Optionals (1/3)
  - [x] Lesson3 Collections (1/4)
  - [x] Lesson4 Control Flow (1/4)
- - [ ] Lesson5 Funcions
+ - [x] Lesson5 Funcions (1/5)
  - [ ] Lesson6 Classes, Properties, and Methods
  - [ ] Lesson7 Enums and Structs
  - [ ] Lesson8 Protocols and Extensions
