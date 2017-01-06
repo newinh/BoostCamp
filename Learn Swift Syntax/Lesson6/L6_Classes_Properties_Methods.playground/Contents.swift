@@ -46,9 +46,14 @@ class KidsMovie {
     static let permittedRatings = ["G", "PG"]
     let reviewScores:[Double]
     
+    
+    
     var metaScore: Double {
         get {
             let value = reviewScores.reduce(0) { $0 + $1 } / Double(reviewScores.count)
+            reviewScores.reduce(0)
+             { $0 + $1 }
+            reviewScores.count
             return value
         }
     }
@@ -63,6 +68,7 @@ class KidsMovie {
 }
 
 var fridayNightMovie = KidsMovie(title:"Princess Bride", director:"Rob Reiner", releaseYear: 1987, mpaaRating:"PG", reviewScores:[9, 9.5, 10, 9.5])
+fridayNightMovie.metaScore
 
 //: ### Calling Instance Methods
 // Make an array filled with Rob Reiner movies
