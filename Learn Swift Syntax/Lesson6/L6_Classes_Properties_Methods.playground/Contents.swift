@@ -84,13 +84,7 @@ var movie = myArchive.filterByYear(1986)
 var firstMovie = movie[0]
 print("\(firstMovie.title)")
 
+
 //: ### Calling Type methods
 UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary)
-
-
-
-
-
-
-
 

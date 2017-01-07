@@ -13,10 +13,21 @@ struct Tail {
 class Animal {
     var species: String = ""
     let tail: Tail
+    
+    init(species : String, tail : Double) {
+        self.species = species
+        self.tail = Tail.init(lengthInCm: tail)
+    }
+    init(species : String) {
+        self.species = species
+        self.tail = Tail.init(lengthInCm: 0)
+    }
 }
 //: __1b.__
 //: Instantiate and initialize a few different Animals.
-
+var york = Animal(species: "york", tail: 14.5)
+york.species
+york.tail.lengthInCm
 //: __Problem 2__
 //:
 //: Below are the beginnings of the Peach class.
@@ -26,11 +37,25 @@ class Peach {
     // Softness is rated on a scale from 1 to 5, with 5 being the softest
     var softness: Int
     
+    static var varieties = ["August Pride", "Babcock", "Baby Crawford", "Belle of Georgia"]
+    
     init(variety: String, softness: Int) {
         self.variety = variety
         self.softness = softness
     }
+    
+    func ripen() -> String {
+        
+        if softness <= 5 {
+            softness += 1
+        }
+        
+        return "Peach's softness is \(softness)"
+    }
 }
+
+var peach0 = Peach(variety: "Babcock", softness: 3)
+peach0.ripen()
 //: __2a.__
 //: Add a type property to the Peach class called "varieties". It should hold an array of different types of peaches.
 //:
@@ -44,7 +69,7 @@ class Peach {
 //:
 //: __3a.__
 //:Add the computed property, "cuddlability", to the class, FluffyDog. Cuddlability should be computed based on the values of the stored properties, fluffiness and droolFactor.
-var theFluffiestDog = UIImage(named:"fluffyDog")!
+//var theFluffiestDog = UIImage(named:"fluffyDog")!
 class FluffyDog {
     let name: String
     let fluffiness: Int
@@ -104,21 +129,21 @@ enum NaturalDisaster {
     case hurricane
 }
 
-class House {
-    var numberOfBedrooms: Int = 0
-    let location: Quality
- 
-    func willStayStanding(_ naturalDisaster:NaturalDisaster)-> Bool {
-        switch naturalDisaster {
-        case .earthquake:
-            return true
-        case .wildfire:
-            return true
-        case .hurricane:
-            return false
-        }
-    }
-}
+//class House {
+//    var numberOfBedrooms: Int = 0
+//    let location: Quality
+// 
+//    func willStayStanding(_ naturalDisaster:NaturalDisaster)-> Bool {
+//        switch naturalDisaster {
+//        case .earthquake:
+//            return true
+//        case .wildfire:
+//            return true
+//        case .hurricane:
+//            return false
+//        }
+//    }
+//}
 
 //: __5b.__
 //: Create an instance of the House class and use it to call the method, willStayStanding().  This method takes in a parameter of type NaturalDisaster and return a Bool indicating whether the house will stay standing in a given natural disaster.

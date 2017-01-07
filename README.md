@@ -21,7 +21,7 @@
  - [x] Lesson3 Collections (1/4)
  - [x] Lesson4 Control Flow (1/4)
  - [x] Lesson5 Funcions (1/5)
- - [ ] Lesson6 Classes, Properties, and Methods
+ - [x] Lesson6 Classes, Properties, and Methods (1/6)
  - [ ] Lesson7 Enums and Structs
  - [ ] Lesson8 Protocols and Extensions
  - [ ] Lesson9 Closure Expressions
