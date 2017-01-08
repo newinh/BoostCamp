@@ -1,4 +1,4 @@
-# [Udacity](https://www.udacity.com) with [BoostCamp](http://boostcamp.connect.or.kr)
+# [BoostCamp](http://boostcamp.connect.or.kr) with [Udacity](https://www.udacity.com)
  **진도표**  ~~*(MarkDown 연습용)*~~
 
 
