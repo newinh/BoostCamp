@@ -81,12 +81,20 @@ class FluffyDog {
         self.droolFactor = droolFactor
     }
     
+    var cuddlability : Int {
+        get{
+            return 3*fluffiness - 2*droolFactor
+        }
+    }
+    
     func chase(_ wheeledVehicle: String)-> String {
         return "Where are you going, \(wheeledVehicle)? Wait for me! No, don't go! I will catch you!"
     }
 }
 //: __3b.__
 //: Instantiate and initialize an instance of the class, FluffyDog. Use it to call the method, chase().
+let bichon = FluffyDog(name: "zzong", fluffiness: 7, droolFactor: 2)
+bichon.chase("truck")
 
 //: __Problem 4__
 //:
@@ -108,13 +116,37 @@ class ChattyDog {
         self.breed = breed
         self.size = size
     }
+    
+    static func speak(){
+        print("안녕하세요 사람친구들!")
+    }
+    
+    func bark() -> String {
+        
+        var barkMessage : String
+        
+        switch size {
+        case .large:
+            barkMessage = "왕왕"
+        case .medium:
+            barkMessage = "멍멍"
+        default:
+            barkMessage = "왈왈"
+        }
+        
+        
+        return "\(name) is barking. \"\(barkMessage)\" "
+    }
+    
+    
 }
 //: __4b.__
 //: Create an instance of ChattyDog and use it to call the method, bark().
-
+var chihuahua = ChattyDog(name: "Hoon", breed: "Chihuahua", size: .small)
+chihuahua.bark()
 //: __4c.__
 //: Rewrite the method, bark(), as a type method and rename it speak(). Call your type method to test it out.
-
+//chihuahua.speak()
 //: __Problem 5__
 //:
 //:__5a.__
@@ -129,25 +161,54 @@ enum NaturalDisaster {
     case hurricane
 }
 
-//class House {
-//    var numberOfBedrooms: Int = 0
-//    let location: Quality
-// 
-//    func willStayStanding(_ naturalDisaster:NaturalDisaster)-> Bool {
-//        switch naturalDisaster {
-//        case .earthquake:
-//            return true
-//        case .wildfire:
-//            return true
-//        case .hurricane:
-//            return false
-//        }
-//    }
-//}
+class House {
+    var numberOfBedrooms: Int = 0
+    let location: Quality
+    
+    init(numberOfBedrooms : Int, location : Quality){
+        self.numberOfBedrooms = numberOfBedrooms
+        self.location = location
+    }
+ 
+    func willStayStanding(_ naturalDisaster:NaturalDisaster)-> Bool {
+        switch naturalDisaster {
+        case .earthquake:
+            return true
+        case .wildfire:
+            return true
+        case .hurricane:
+            return false
+        }
+    }
+    
+    var worthyOfAnOffer : Bool{
+        get{
+            
+            var locationess : Int
+            
+            switch location {
+            case .excellent :
+                locationess = 4
+            case .fair :
+                locationess = 3
+            case .good :
+                locationess = 2
+            default :
+                locationess = 1
+                
+            }
+            
+            return (locationess + numberOfBedrooms) > 5 ? true : false
+        }
+        
+        
+    }
+}
 
 //: __5b.__
 //: Create an instance of the House class and use it to call the method, willStayStanding().  This method takes in a parameter of type NaturalDisaster and return a Bool indicating whether the house will stay standing in a given natural disaster.
-
+var myHome = House(numberOfBedrooms: 3, location: Quality.fair)
+myHome.willStayStanding(.earthquake)
 //: __5c.__
 //: Add a computed property called, "worthyOfAnOffer". This property should be a Bool, whose return value is dependent upon some combination of the stored properties, numberOfBedrooms and location.
 

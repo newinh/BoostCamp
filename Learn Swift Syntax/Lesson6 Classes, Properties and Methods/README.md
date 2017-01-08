@@ -80,6 +80,10 @@ class KidsMovie {
             let value = reviewScores.reduce(0) { $0 + $1 } / Double(reviewScores.count)
             return value
         }
+
+        set{
+            // do something
+        }
     }
 
     init(title: String, director: String, releaseYear: Int, mpaaRating:String, reviewScores: [Double]) {
