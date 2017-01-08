@@ -1,5 +1,6 @@
 //: ## Lesson 6 Exercises - Classes, Properties and Methods
 
+// hi there
 import UIKit
 
 //: __Problem 1__
