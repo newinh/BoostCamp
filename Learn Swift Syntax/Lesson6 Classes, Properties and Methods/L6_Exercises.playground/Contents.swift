@@ -146,7 +146,7 @@ var chihuahua = ChattyDog(name: "Hoon", breed: "Chihuahua", size: .small)
 chihuahua.bark()
 //: __4c.__
 //: Rewrite the method, bark(), as a type method and rename it speak(). Call your type method to test it out.
-//chihuahua.speak()
+ChattyDog.speak()
 //: __Problem 5__
 //:
 //:__5a.__
