@@ -49,19 +49,20 @@ if tenEighty === alsoTenEighty {
     - “Identical to” means that two constants or variables of class type refer to exactly the same class instance.
     - “Equal to” means that two instances are considered “equal” or “equivalent” in value, for some appropriate meaning of “equal”, as defined by the type’s designer.
 
-
-- function의 매개변수와도 연관이 지어지는 부분이다.
-
 - **스위프트의 기본 데이터 타입은 모두 구조체!!**
 기본 데이터 타입은 값 타입이라, 전달인자를 통해 데이터를 전달하면 모두 값이 복사되어 전달될뿐.
+
+- function의 매개변수와도 연관이 있다.
 
 ### 상속여부
 
  - **구조체는 상속할 수 없습니다.** -> 상속이 필요한 경우 Class를 사용하자.
- - 타입캐스팅은 클래스의 인스턴스에만 허용된다.
- - 참조횟수계산(Reference Counting)은 클래스의 인스턴스에만 적용된다.
+ - 타입캐스팅은 클래스의 인스턴스에만 허용된다. -> 상속도 안되는데 당연한 소릴..
+ - 참조횟수계산(Reference Counting)은 클래스의 인스턴스에만 적용된다. -> 저번주에 배운 ARC
 
 ### 초기화
+
+ 클래스와 구조체의 초기화를 보다보니 스위프트는 초기화에 매우 엄격하다는 것을 알게되었다.
 
  - 구조체는 Initializer를 사용하지 않아도 기본적인 memberWize Initializer가 제공된다. (왜 얘만?)
  - 클래는에게는 Deinitializer 가 존재한다. (deinit 메소드)
@@ -80,11 +81,17 @@ if tenEighty === alsoTenEighty {
 
 구조체 사용 예
 > - The size of a geometric shape, perhaps encapsulating a width property and a height property, both of type Double.
- - A way to refer to ranges within a series, perhaps encapsulating a start property and a length property, both of type Int.
- - A point in a 3D coordinate system, perhaps encapsulating x, y and z properties, each of type Double.
+- A way to refer to ranges within a series, perhaps encapsulating a start property and a length property, both of type Int.
+- A point in a 3D coordinate system, perhaps encapsulating x, y and z properties, each of type Double.
 
  [Swift - 언제 class 대신 struct 를 사용하는가](http://seorenn.blogspot.kr/2016/04/swift-class-struct.html)
+위 링크에서 정리해준 struct를 쓰면 유리해 지는 예
 
+> - 불변성(Immutable)이 필요한 데이터 타입
+- 적은 데이터, 즉 멤버 프로퍼티의 갯수나 차지하는 메모리 용량이 적은 타입
+- 대입 보다는 생성되는 경우가 많은 타입
+- 공유될 필요가 없는 타입
+- 클래스 타입 등 레퍼런스에 기반한 자료형을 저장용 프로퍼티로 쓰지 않는 경우
 
 
 
