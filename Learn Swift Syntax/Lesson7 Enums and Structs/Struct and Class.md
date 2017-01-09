@@ -30,7 +30,7 @@
 
 ### Value vs Reference
 앞서 강조했던 내용이다. 이 부분은 설명이 잘된 곳이 많다 :)   
-그래서 여기선 아직 어렵게 느껴지지만 이 이부분과 관련됬다고 생각되는 내용을 적어본다.
+그래서 여기선 아직 어렵게 느껴지지만 이 부분과 관련됬다고 생각되는 내용을 적어본다.
 
 - [Swift - let(상수선언)에 대해 파고들기](http://seorenn.blogspot.kr/2014/07/swift-let.html)   
 구조체를 상수`let`로 선언하면 인스턴스 내부의 프로퍼티 값을 변경할 수 없다. 구조체도 `var` 프로퍼티도 `var`형으로 선언 되어있을 경우, 메소드를 이용해서 프로퍼티를 변경하려면 메소드에 `mutating`키워드가 필요하다. 반면, 클래스의 인스턴스는 상수 `let`로 선언해도 내부 프로퍼티 값을 변경할 수 있다!
@@ -43,13 +43,13 @@ if tenEighty === alsoTenEighty {
     print("tenEighty and alsoTenEighty refer to the same VideoMode instance.")
 }
 ```
-[Equivalence Operators](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/AdvancedOperators.html#//apple_ref/doc/uid/TP40014097-CH27-ID45)에 대해서도 알아두자.
+[Equivalence Operators](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/AdvancedOperators.html#//apple_ref/doc/uid/TP40014097-CH27-ID45)에 대해서도 알아두자. (*Identical* vs *Equal*)
 
 > Note that “identical to” (represented by three equals signs, or ===) does not mean the same thing as “equal to” (represented by two equals signs, or ==):
 - “Identical to” means that two constants or variables of class type refer to exactly the same class instance.
 - “Equal to” means that two instances are considered “equal” or “equivalent” in value, for some appropriate meaning of “equal”, as defined by the type’s designer.
 
-- **스위프트의 기본 데이터 타입은 모두 구조체!!**
+- **스위프트의 기본 데이터 타입은 모두 구조체!!**  
 기본 데이터 타입은 값 타입이라, 전달인자를 통해 데이터를 전달하면 모두 값이 복사되어 전달될뿐.
 
 - function의 매개변수와도 연관이 있다.
@@ -85,7 +85,7 @@ if tenEighty === alsoTenEighty {
 - A point in a 3D coordinate system, perhaps encapsulating x, y and z properties, each of type Double.
 
  [Swift - 언제 class 대신 struct 를 사용하는가](http://seorenn.blogspot.kr/2016/04/swift-class-struct.html)
-위 링크에서 정리해준 struct를 쓰면 유리해 지는 예
+ 링크 글쓴이께서 정리해주신 struct를 쓰면 유리해 지는 예
 
 > - 불변성(Immutable)이 필요한 데이터 타입
 - 적은 데이터, 즉 멤버 프로퍼티의 갯수나 차지하는 메모리 용량이 적은 타입
