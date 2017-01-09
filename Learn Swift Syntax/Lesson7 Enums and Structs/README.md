@@ -54,10 +54,9 @@ enum Barcode {
 ```
 
 > Define an enumeration type called Barcode, which can take either a value of upc with an associated value of type (Int, Int, Int, Int), or a value of qrCode with an associated value of type String.     
-이 정의는 실제 값이 아닌 `Barcode`가 가질 수 있는 type을 뜻한다.
 
-
-그리고 New barcodes can then be created using either type :
+이 정의는 실제 값이 아닌 `Barcode`가 가질 수 있는 type을 뜻한다.   
+New barcodes can then be created using either type :
 
 ```swift
 var productBarcode = Barcode.upc(8, 85909, 51226, 3)

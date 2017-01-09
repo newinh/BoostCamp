@@ -27,6 +27,10 @@ var espressoForGabrielle = macchiato
 espressoForGabrielle.steamedMilk = .splash
 macchiato.steamedMilk
 
+//my solution 
+// macchiato.steamedMilk is none. But if EspressoDrink is implemented as a class, macchiato.steamMilk. will be Amount.splash
+
+
 //: __Problem 2__
 //:
 //: __2a.__
@@ -35,18 +39,23 @@ macchiato.steamedMilk
 //: __2b.__
 //: Associate an Int value with each finger.
 
+// my solution
+enum Fingers : Int{
+    case thumb = 1, index, middle, ring, pinky
+}
+
 //: __Problem 3__
 //:
 //: Enum, class, or struct?
 //:
 //: Uncomment the code below and choose whether each type should be an enum, class, or struct.
-//____ Window {
+//class Window {
 //    let height: Double
 //    let width: Double
 //    var open: Bool
 //}
 
-//____ WritingImplement {
+//enum WritingImplement {
 //    case pen
 //    case pencil
 //    case marker
@@ -54,14 +63,14 @@ macchiato.steamedMilk
 //    case chalk
 //}
 
-//____ Material {
+//struct Material {
 //    let name: String
 //    let density: Double
 //    let stiffness: Double
 //}
 
 
-//____ Bicycle {
+//struct Bicycle {
 //    let frame: Material
 //    let weight: Double
 //    let category: String
@@ -73,7 +82,7 @@ macchiato.steamedMilk
 //    }
 //}
 
-//____ Cyclist {
+//struct Cyclist {
 //    var speed: Double
 //    let agility: Double
 //    let bike: Bicycle
@@ -99,7 +108,7 @@ macchiato.steamedMilk
 //    }
 //}
 
-//____ Size: String {
+//enum Size: String {
 //    case small = "8 ounces"
 //    case medium = "12 ounces"
 //    case large = "16 ounces"
@@ -120,6 +129,24 @@ macchiato.steamedMilk
 
 //: __4d.__
 //: Create an instance of your Cookie struct and call its method.
+struct Cookie{
+    let flavor : String
+    let minutesSinceRemovalFromOven : Int
+    
+    var delicious : Bool{
+        get {
+            return minutesSinceRemovalFromOven < 7 ? true : false
+        }
+    }
+    
+    func tempt(){
+        print("I'm trying to eat cookie.")
+    }
+    
+}
+
+var cho = Cookie(flavor: "good", minutesSinceRemovalFromOven: 4)
+cho.tempt()
 
 //: __Problem 5__
 //:
@@ -136,3 +163,35 @@ macchiato.steamedMilk
 
 //: __5d.__
 //: Create an instance of your BnBListing class and call one of its methods.
+enum Rate {
+    case good
+    case soso
+    case bad
+}
+
+
+class Hotel{
+    
+    let availability : Bool
+    let numberOfBed : Int
+    let offerOfBreakfast : Bool
+    let rate : Rate
+    
+    init(availavility : Bool, numberOfBed : Int, offerOfBreakfast : Bool, rate : Rate) {
+        self.availability = availavility
+        self.numberOfBed = numberOfBed
+        self.offerOfBreakfast = offerOfBreakfast
+        self.rate = rate
+    }
+    
+    func book() -> Bool {
+        return availability
+    }
+    
+    
+}
+
+
+var theMoon = Hotel(availavility: true, numberOfBed: 88, offerOfBreakfast: true, rate: .good )
+theMoon.book()
+
