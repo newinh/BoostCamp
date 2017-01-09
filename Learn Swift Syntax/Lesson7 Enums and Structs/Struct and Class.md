@@ -3,7 +3,10 @@
 - Overview
 - 공통점
 - 차이점I
-- 차이점II
+    - 값 vs 참조
+    - 상속여부
+    - 초기화
+- 구조체와 클래스 선택하기!
 
 ~~오늘은 한글사랑~~
 
@@ -29,35 +32,58 @@
 앞서 강조했던 내용이다. 이 부분은 설명이 잘된 곳이 많다 :)   
 그래서 여기선 아직 어렵게 느껴지지만 이 이부분과 관련됬다고 생각되는 내용을 적어본다.
 
-[Swift - let(상수선언)에 대해 파고들기](http://seorenn.blogspot.kr/2014/07/swift-let.html)   
+- [Swift - let(상수선언)에 대해 파고들기](http://seorenn.blogspot.kr/2014/07/swift-let.html)   
 구조체를 상수`let`로 선언하면 인스턴스 내부의 프로퍼티 값을 변경할 수 없다. 구조체도 `var` 프로퍼티도 `var`형으로 선언 되어있을 경우, 메소드를 이용해서 프로퍼티를 변경하려면 메소드에 `mutating`키워드가 필요하다. 반면, 클래스의 인스턴스는 상수 `let`로 선언해도 내부 프로퍼티 값을 변경할 수 있다!
 
 다음에 더 자세히 공부해보기로 하고 넘어가자. ~~`mutating`으로부터  ㅌㅌㅌㅌ~~
 
-Swift에는 클래스의 인스턴스 끼리 참조가 같은지 확인하라 수 있는 식별 연산자(Identity Operator)가 존재한다.
+- Swift에는 클래스의 인스턴스 끼리 참조가같은지 확인하라 수 있는 식별 연산자(Identity Operator)가 존재한다.
 ```swift
 if tenEighty === alsoTenEighty {
     print("tenEighty and alsoTenEighty refer to the same VideoMode instance.")
 }
 ```
+[Equivalence Operators](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/AdvancedOperators.html#//apple_ref/doc/uid/TP40014097-CH27-ID45)에 대해서도 알아두자.
 
 > Note that “identical to” (represented by three equals signs, or ===) does not mean the same thing as “equal to” (represented by two equals signs, or ==):
+    - “Identical to” means that two constants or variables of class type refer to exactly the same class instance.
+    - “Equal to” means that two instances are considered “equal” or “equivalent” in value, for some appropriate meaning of “equal”, as defined by the type’s designer.
 
- - “Identical to” means that two constants or variables of class type refer to exactly the same class instance.
- - “Equal to” means that two instances are considered “equal” or “equivalent” in value, for some appropriate meaning of “equal”, as defined by the type’s designer.
+
+- function의 매개변수와도 연관이 지어지는 부분이다.
+
+- **스위프트의 기본 데이터 타입은 모두 구조체!!**
+기본 데이터 타입은 값 타입이라, 전달인자를 통해 데이터를 전달하면 모두 값이 복사되어 전달될뿐.
 
 ### 상속여부
 
  - **구조체는 상속할 수 없습니다.** -> 상속이 필요한 경우 Class를 사용하자.
- - 타입
+ - 타입캐스팅은 클래스의 인스턴스에만 허용된다.
+ - 참조횟수계산(Reference Counting)은 클래스의 인스턴스에만 적용된다.
+
+### 초기화
+
+ - 구조체는 Initializer를 사용하지 않아도 기본적인 memberWize Initializer가 제공된다. (왜 얘만?)
+ - 클래는에게는 Deinitializer 가 존재한다. (deinit 메소드)
+(구조체는 메모리 해제가 안되는걸까?) 
 
 
-## 차이점II
+## 구조체와 클래스 선택하기!
 
+비슷해보이지만 우리는 대부분 class를 쓰게 될거라고 그러넹ㅋ,ㅋ
 
+아래는 Apple에서 구조체를 권하는 경우.
+> - 연관된 간단한 값의 집합을 캡슐화하는 것만이 목적일 때
+ - 캡슐화된 값이 참조되는 것보다 복사되는 것이 합당할 때
+ - 구조체에 저장된 프로퍼티가 값 타입이며, 참조되는 것 보다는 복사되는 것이 합당할 때
+ - 다른 타입으로부터 상속받거나 자신이 상속이 필요할 때
 
+구조체 사용 예
+> - The size of a geometric shape, perhaps encapsulating a width property and a height property, both of type Double.
+ - A way to refer to ranges within a series, perhaps encapsulating a start property and a length property, both of type Int.
+ - A point in a 3D coordinate system, perhaps encapsulating x, y and z properties, each of type Double.
 
-
+ [Swift - 언제 class 대신 struct 를 사용하는가](http://seorenn.blogspot.kr/2016/04/swift-class-struct.html)
 
 
 
