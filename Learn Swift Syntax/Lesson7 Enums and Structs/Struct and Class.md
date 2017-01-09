@@ -2,7 +2,7 @@
 
 - Overview
 - 공통점
-- 차이점I
+- 차이점
     - 값 vs 참조
     - 상속여부
     - 초기화
@@ -12,7 +12,7 @@
 
 ## Overview
 
- Struct와 Class는 데이터를 적절히 묶어 만드는, 하나의 새로운 데이터 타입이다. 많은 공통점이 있지만 둘 사이를 가로짓는 가장 큰 차이점은 **Class는 Reference Type**이고 **Struct는 Value Type**이다.  
+ *Struct*와 *Class*는 데이터를 적절히 묶어 만드는, 하나의 새로운 데이터 타입이다. 많은 공통점이 있지만 둘 사이를 가로짓는 가장 큰 차이점은 **Class는 Reference Type**이고 **Struct는 Value Type**이다.  
 
 ## 공통점
 
@@ -46,8 +46,8 @@ if tenEighty === alsoTenEighty {
 [Equivalence Operators](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/AdvancedOperators.html#//apple_ref/doc/uid/TP40014097-CH27-ID45)에 대해서도 알아두자.
 
 > Note that “identical to” (represented by three equals signs, or ===) does not mean the same thing as “equal to” (represented by two equals signs, or ==):
-    - “Identical to” means that two constants or variables of class type refer to exactly the same class instance.
-    - “Equal to” means that two instances are considered “equal” or “equivalent” in value, for some appropriate meaning of “equal”, as defined by the type’s designer.
+- “Identical to” means that two constants or variables of class type refer to exactly the same class instance.
+- “Equal to” means that two instances are considered “equal” or “equivalent” in value, for some appropriate meaning of “equal”, as defined by the type’s designer.
 
 - **스위프트의 기본 데이터 타입은 모두 구조체!!**
 기본 데이터 타입은 값 타입이라, 전달인자를 통해 데이터를 전달하면 모두 값이 복사되어 전달될뿐.
