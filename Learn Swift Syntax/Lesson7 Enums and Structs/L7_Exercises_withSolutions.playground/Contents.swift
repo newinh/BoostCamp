@@ -13,12 +13,16 @@ enum Amount {
 struct EspressoDrink {
     let numberOfShots: Int
     var steamedMilk: Amount
-    let foam: Bool
+    var foam: Bool
 
     init(numberOfShots: Int, steamedMilk: Amount, foam: Bool) {
         self.numberOfShots = numberOfShots
         self.steamedMilk = steamedMilk
         self.foam = foam
+    }
+    
+    mutating func changeValue(_ foamChange : Bool){
+        foam = foamChange
     }
 }
 
@@ -26,6 +30,14 @@ var macchiato = EspressoDrink(numberOfShots: 2, steamedMilk: .none, foam: true)
 var espressoForGabrielle = macchiato
 espressoForGabrielle.steamedMilk = .splash
 macchiato.steamedMilk
+
+let a = EspressoDrink(numberOfShots: 2, steamedMilk: .none, foam: true)
+// struct 와 class 의 치이 추가, 내부 프로퍼티 접근가능성, 
+// method로 바꿀 땐 mutating 키워드 사용
+//a.changeValue(true)
+
+
+//print(macchiato === espressoForGabrielle)
 
 // Solution
 // if EspressoDrink is a struct, macchiato.steamedMilk == .None
