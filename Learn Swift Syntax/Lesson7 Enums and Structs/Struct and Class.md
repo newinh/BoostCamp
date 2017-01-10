@@ -75,9 +75,9 @@ if tenEighty === alsoTenEighty {
 
 아래는 Apple에서 구조체를 권하는 경우.
 > - 연관된 간단한 값의 집합을 캡슐화하는 것만이 목적일 때
- - 캡슐화된 값이 참조되는 것보다 복사되는 것이 합당할 때
- - 구조체에 저장된 프로퍼티가 값 타입이며, 참조되는 것 보다는 복사되는 것이 합당할 때
- - 다른 타입으로부터 상속받거나 자신이 상속이 필요할 때
+- 캡슐화된 값이 참조되는 것보다 복사되는 것이 합당할 때
+- 구조체에 저장된 프로퍼티가 값 타입이며, 참조되는 것 보다는 복사되는 것이 합당할 때
+- 다른 타입으로부터 상속받거나 자신이 상속이 필요할 때
 
 구조체 사용 예
 > - The size of a geometric shape, perhaps encapsulating a width property and a height property, both of type Double.
