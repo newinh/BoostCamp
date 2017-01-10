@@ -4,7 +4,7 @@
 ![Audio in ios](./Audio in ios.png)
 
 
-### Remaing
+## Remaing
 
 View Controller 이름 바꾸기
 
@@ -15,7 +15,7 @@ Storyboard의 identity inspector에서 연결되는 Class도 바꿔주자.
 
 
 
-### Adding AVAudioRecorder
+## Adding AVAudioRecorder
 RecordSoundsViewController.swift AVFoundaion을 추가하고 record 버튼과 stopRecord버튼에 동작을 추가했다.
 ```swift
 import AVFoundation
@@ -59,22 +59,21 @@ import AVFoundation
 이제 처리해야할 두가지 이슈가 남았다.
 - *첫번째 뷰 컨트롤러*에서 *두번째 뷰 컨트롤러*로 오디오 파일 보내기
 - *두번째 뷰 컨트롤러*는 온전한 파일을 받을때 까지 기다리긔
-==============
 
-### Fixing the Sugue
+## Fixing the Sugue
 먼저 두번째 이슈부터 처리해보자.
 
 ![Fixing Segue] (./Fixing Segue.png)
 
 
-### Meaning of Word Delegate
+## Meaning of Word Delegate
 
 설명하는 자막과 함께 캡쳐했다.
 ![Delegation](./Delegation.png)
 AVAudioRecorder는 아는게 없다. 단지 도구로서 할 일을 하고, 끝나면 View Controller에게 일이 끝났음을 알린다. 그 뒤 View Controller가 해야할 일을 한다. ~~아직 잘모르겠다~~
 
 
-### Adding Delegation to RecordSoundsVC
+## Adding Delegation to RecordSoundsVC
 
 - 먼저 *RecordSoundViewContoller(RSVC)*에게 *audioRecorder delegate protocol*을 수행할 것임을 알리자.
 우리 Vies Controller는 *delegate protocol*을 쓸거고 *audioRecorder*를 위해 *delegate*처럼 작동할거라고 말하는거야.
@@ -108,9 +107,9 @@ func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully f
 ```
 
 
-### Sending the Recorded Audio File
+## Sending the Recorded Audio File
 
-녹음이 끝나면, *stopRecording*이라는 위에서 만들었던 *Segue*를 호훌하는 코드이다. *sender*라는 파라미터를 이용하여 *Segue*를 통해 보내고 싶은 것을 어떠한 것이든 보낼 수 있다. (`Any?`타입이더라)   
+녹음이 끝나면, *stopRecording*이라는 위에서 만들었던 *Segue*를 호출하는 코드이다. *sender*라는 파라미터를 이용하여 *Segue*를 통해 보내고 싶은 것을 어떠한 것이든 보낼 수 있다. (`Any?`타입이더라)   
 flag는 녹음파일 저장이 무사히 마쳤음을 알려준다.
 ```swift
 func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
@@ -123,15 +122,16 @@ func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully f
 }
 ```
 
-### Creating the PlaySoundsViewController
+## Creating the PlaySoundsViewController
 
  Project Navigator -> PitchPerfect 폴더 우클릭 -> Cocoa Touch Class, `Next` -> Class명, super Class 지정 -> PitchPerfect를 타겟으로 하고 -> `Create`
 
 마지막으로 스토리보드에서 두번째 View Controller에게 방금 만든 Class를 주자.
+
 ![Create PSVC][./Create PSVC.png]
 
 
-### Prepare for Segue and Receiving the Data
+## Prepare for Segue and Receiving the Data
 
  먼저 *PlaySoundsViewController* 클래스에 아래 코드 추가 
 ```swift
