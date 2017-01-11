@@ -22,6 +22,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hT6-GG-Eq9">
+                                <rect key="frame" x="16" y="64" width="343" height="603"/>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6y-se-MW2">
                                 <rect key="frame" x="110" y="256" width="155" height="155"/>
                                 <state key="normal" image="RecordButton"/>
@@ -49,12 +52,16 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="hT6-GG-Eq9" secondAttribute="trailing" id="CkZ-gl-Fzy"/>
                             <constraint firstItem="GAR-C2-yYE" firstAttribute="top" secondItem="w6y-se-MW2" secondAttribute="bottom" constant="8" id="EK3-yP-tS4"/>
                             <constraint firstItem="GAR-C2-yYE" firstAttribute="centerX" secondItem="w6y-se-MW2" secondAttribute="centerX" id="F9E-T9-zxW"/>
                             <constraint firstItem="w6y-se-MW2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JJg-Ca-zqE"/>
                             <constraint firstItem="w6y-se-MW2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="K7S-Sx-DE9"/>
                             <constraint firstItem="VRs-E9-WAB" firstAttribute="top" secondItem="GAR-C2-yYE" secondAttribute="bottom" constant="8" id="Rfn-RI-0A1"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hT6-GG-Eq9" secondAttribute="bottom" id="SEs-2I-Mgo"/>
+                            <constraint firstItem="hT6-GG-Eq9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Xvc-xl-82u"/>
                             <constraint firstItem="VRs-E9-WAB" firstAttribute="centerX" secondItem="GAR-C2-yYE" secondAttribute="centerX" id="Zv3-s0-Z9g"/>
+                            <constraint firstItem="hT6-GG-Eq9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="uwq-yk-oqu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bGn-em-vmB"/>
