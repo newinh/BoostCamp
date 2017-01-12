@@ -38,6 +38,8 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
         // recordSoundViewController로 부터 전달받은 오디오 파일을 로드.
         do {
             audioFile = try AVAudioFile(forReading: recordedAudioURL as URL)
+            remainTime = Double(self.audioFile.length) / Double(self.audioFile.processingFormat.sampleRate)
+            printTime()
         } catch {
             showAlert(Alerts.AudioFileError, message: String(describing: error))
         }        
@@ -128,6 +130,7 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
         }
 
         remainTime = duration
+        audioFileTime = duration
         self.printTimer = Timer(timeInterval: 0.1, target: self, selector: #selector(PlaySoundsViewController.printTime), userInfo: nil, repeats: true)
         RunLoop.main.add(self.printTimer, forMode: RunLoopMode.defaultRunLoopMode)
         
@@ -139,15 +142,23 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
         remainTime -= 0.1
         if remainTime <= 0{
             printTimer.invalidate()
-            remainTimeLabel.text = "0:0"
+            remainTimeLabel.text = "0.0s"
+            
+            durationProgreeeBar.progress = 1
             return
         }
         
         let intRemainTime = Int(remainTime * 10)
+        remainTimeLabel.text = "\(intRemainTime / 10).\(intRemainTime % 10)s"
         
-        remainTimeLabel.text = "\(intRemainTime / 10):\(intRemainTime % 10)"
-        
+        let f = Float((remainTime/audioFileTime))
+        durationProgreeeBar.progress = 1 - f
     }
+    
+//    func sPrintTime(time: TimeInterval){
+//        let intTime = Int(time * 10)
+//        remainTimeLabel.text = "\(intTime / 10).\(intTime % 10)s"
+//    }
     
     func stopAudio() {
         
@@ -168,7 +179,9 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
         
         if let printTimer = printTimer {
             printTimer.invalidate()
-            remainTimeLabel.text = "0:0s"
+            remainTimeLabel.text = "0.0s"
+            durationProgreeeBar.progress = 1
+
         }
     }
     
@@ -200,6 +213,13 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
         vaderButton.isEnabled = enabled
         echoButton.isEnabled = enabled
         reverbButton.isEnabled = enabled
+        
+        customSwitch.isEnabled = enabled
+        rateSlider.isEnabled = enabled
+        pitchSlider.isEnabled = enabled
+        echoSwitch.isEnabled = enabled
+        reverbSwitch.isEnabled = enabled
+        
     }
 
     func showAlert(_ title: String, message: String) {

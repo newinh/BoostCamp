@@ -12,8 +12,11 @@ import AVFoundation
 class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     var audioRecorder: AVAudioRecorder!
+    var durationTimer: Timer!
+    var durationTime : Double = 0.0
 
     @IBOutlet weak var recordingLabel: UILabel!
+    @IBOutlet weak var duration: UILabel!
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var stopRecordingButton: UIButton!
     
@@ -25,7 +28,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("viewWillAppear called")
+        durationTime = 0.0
+        duration.text = "0.0s"
         
     }
 
@@ -49,6 +53,10 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         audioRecorder.isMeteringEnabled = true
         audioRecorder.prepareToRecord()
         audioRecorder.record()
+        
+        durationTimer = Timer(timeInterval: 0.1, target: self, selector: #selector(PlaySoundsViewController.printTime), userInfo: nil, repeats: true)
+        RunLoop.main.add(self.durationTimer!, forMode: RunLoopMode.defaultRunLoopMode)
+
     }
     
     @IBAction func stopRecording(_ sender: Any) {
@@ -59,6 +67,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         audioRecorder.stop()
         let audioSession = AVAudioSession.sharedInstance()
         try! audioSession.setActive(false)
+        
+        durationTimer.invalidate()
     }
     
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
@@ -75,6 +85,11 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
             let recordedAudioURL = sender as! URL
             playSoundsVC.recordedAudioURL = recordedAudioURL
         }
+    }
+    
+    func printTime(){
+        duration.text = String(format: "%.1f", durationTime) + "s"
+        durationTime += 0.1
     }
 }
 

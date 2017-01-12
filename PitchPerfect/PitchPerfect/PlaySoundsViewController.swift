@@ -16,10 +16,15 @@ class PlaySoundsViewController: UIViewController {
     var audioEngine: AVAudioEngine!
     var audioPlayerNode: AVAudioPlayerNode!
     var stopTimer: Timer!
-
     var printTimer: Timer!
     
     var remainTime : TimeInterval = 0.0
+    var audioFileTime : TimeInterval = 0.0
+    
+    var rate : Float!
+    var pitch : Float!
+    var echo : Bool!
+    var reverb : Bool!
     
     enum ButtonType: Int{
         case slow = 0, fast, chipmunk, vader, echo, reverb
@@ -36,6 +41,18 @@ class PlaySoundsViewController: UIViewController {
     @IBOutlet weak var stopButton: UIButton!
     
     @IBOutlet weak var remainTimeLabel:UILabel!
+    @IBOutlet weak var durationProgreeeBar:UIProgressView!
+    @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var customSwitch: UISwitch!
+    @IBOutlet weak var buttonStackView: UIStackView!
+    @IBOutlet weak var customStackView: UIStackView!
+    
+    // slider 2 switch 2
+    @IBOutlet weak var rateSlider: UISlider!
+    @IBOutlet weak var pitchSlider: UISlider!
+    @IBOutlet weak var echoSwitch: UISwitch!
+    @IBOutlet weak var reverbSwitch: UISwitch!
+    
     
     // Mark : Actions
     
@@ -59,8 +76,35 @@ class PlaySoundsViewController: UIViewController {
         configureUI(.playing)
     }
     
+    @IBAction func customPlayPressed(_ sender: UIButton){
+        
+        rate = powf(32, rateSlider.value)
+        pitch = pitchSlider.value
+        echo = echoSwitch.isOn
+        reverb = reverbSwitch.isOn
+        
+        playSound(rate: rate, pitch: pitch, echo: echo, reverb: reverb)
+        configureUI(.playing)
+    }
+    
+    
     @IBAction func stopButtonPressed(_ sender: AnyObject){
         stopAudio()
+    }
+    
+    
+    @IBAction func customSwichChange(_ sender: UISwitch){
+        print(customSwitch.isOn)
+        
+        if customSwitch.isOn {
+            playButton.isEnabled = true
+            buttonStackView.isHidden = true
+            customStackView.isHidden = false
+        }else {
+            playButton.isEnabled = false
+            buttonStackView.isHidden = false
+            customStackView.isHidden = true
+        }
     }
     
     
@@ -72,7 +116,13 @@ class PlaySoundsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    
     override func viewWillAppear(_ animated: Bool) {
         configureUI(.notPlaying)
+        
+        durationProgreeeBar.progress = 0
+        customSwitch.isOn = false
+        playButton.isEnabled = false
+        customStackView.isHidden = true
     }
 }
