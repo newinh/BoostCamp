@@ -96,14 +96,14 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2q5-1Q-a78">
                                 <rect key="frame" x="16" y="64" width="343" height="583"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3cv-iz-DgO">
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="3cv-iz-DgO">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="21"/>
                                         <subviews>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="RL4-wL-a2x">
                                                 <rect key="frame" x="0.0" y="9.5" width="308.5" height="2"/>
                                             </progressView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D3u-hW-MPk" userLabel="Remain Time">
-                                                <rect key="frame" x="308.5" y="0.0" width="34.5" height="21"/>
+                                                <rect key="frame" x="338.5" y="0.0" width="4.5" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -116,7 +116,7 @@
                                     <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="6Hf-oi-eUZ">
                                         <rect key="frame" x="0.0" y="21" width="343" height="186"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pfh-8E-830">
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="pfh-8E-830">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="62"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zYz-2M-IXw">
@@ -126,11 +126,11 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="wRO-G8-u9D">
-                                                        <rect key="frame" x="-2" y="0.0" width="347" height="63"/>
+                                                        <rect key="frame" x="48" y="0.0" width="297" height="63"/>
                                                     </slider>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tWT-oC-vlS">
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="tWT-oC-vlS">
                                                 <rect key="frame" x="0.0" y="62" width="343" height="62"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pitch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pij-BV-SRF">
@@ -140,7 +140,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="-2400" maxValue="2400" translatesAutoresizingMaskIntoConstraints="NO" id="BwL-ZV-lMp">
-                                                        <rect key="frame" x="-2" y="0.0" width="347" height="63"/>
+                                                        <rect key="frame" x="48" y="0.0" width="297" height="63"/>
                                                     </slider>
                                                 </subviews>
                                             </stackView>
@@ -273,7 +273,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hx6-3m-fWn">
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hx6-3m-fWn">
                                                         <rect key="frame" x="10.5" y="31" width="51" height="31"/>
                                                         <connections>
                                                             <action selector="customSwichChange:" destination="6kn-vZ-bBR" eventType="valueChanged" id="Gf4-IL-g6M"/>
@@ -300,13 +300,13 @@
                     <connections>
                         <outlet property="buttonStackView" destination="j8l-pc-se8" id="8iR-zm-8r1"/>
                         <outlet property="chipmunkButton" destination="Va7-Fk-XUv" id="rdM-0H-ELy"/>
+                        <outlet property="customPlayButton" destination="i1k-gz-zks" id="aDD-KL-KDX"/>
                         <outlet property="customStackView" destination="6Hf-oi-eUZ" id="5la-Qe-XOP"/>
                         <outlet property="customSwitch" destination="hx6-3m-fWn" id="QEn-ym-cb4"/>
                         <outlet property="durationProgreeeBar" destination="RL4-wL-a2x" id="nal-NX-ebE"/>
                         <outlet property="echoButton" destination="9oC-0q-6mq" id="reL-Iz-f7a"/>
                         <outlet property="echoSwitch" destination="OJE-k8-Tq9" id="nFi-g0-AJb"/>
                         <outlet property="pitchSlider" destination="BwL-ZV-lMp" id="JDO-jK-coO"/>
-                        <outlet property="playButton" destination="i1k-gz-zks" id="gL2-bJ-ojG"/>
                         <outlet property="rabbitButton" destination="0B7-A1-WUw" id="dj5-C2-LxZ"/>
                         <outlet property="rateSlider" destination="wRO-G8-u9D" id="gCf-NE-Z7y"/>
                         <outlet property="remainTimeLabel" destination="D3u-hW-MPk" id="1vq-JX-65d"/>

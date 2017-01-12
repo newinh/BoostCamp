@@ -151,8 +151,8 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
         let intRemainTime = Int(remainTime * 10)
         remainTimeLabel.text = "\(intRemainTime / 10).\(intRemainTime % 10)s"
         
-        let f = Float((remainTime/audioFileTime))
-        durationProgreeeBar.progress = 1 - f
+        let progress = 1 - Float((remainTime/audioFileTime))
+        durationProgreeeBar.progress = progress
     }
     
 //    func sPrintTime(time: TimeInterval){
@@ -200,9 +200,13 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
         case .playing:
             setPlayButtonsEnabled(false)
             stopButton.isEnabled = true
+            customPlayButton.isEnabled = false
         case .notPlaying:
             setPlayButtonsEnabled(true)
             stopButton.isEnabled = false
+            if customSwitch.isOn{
+                customPlayButton.isEnabled = true
+            }
         }
     }
     
@@ -219,7 +223,6 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
         pitchSlider.isEnabled = enabled
         echoSwitch.isEnabled = enabled
         reverbSwitch.isEnabled = enabled
-        
     }
 
     func showAlert(_ title: String, message: String) {

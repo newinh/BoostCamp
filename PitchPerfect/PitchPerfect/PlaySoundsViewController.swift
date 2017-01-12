@@ -31,7 +31,7 @@ class PlaySoundsViewController: UIViewController {
     }
     
     // MARK: Outlets
-    
+    @IBOutlet weak var buttonStackView: UIStackView!
     @IBOutlet weak var snailButton: UIButton!
     @IBOutlet weak var chipmunkButton: UIButton!
     @IBOutlet weak var rabbitButton: UIButton!
@@ -42,12 +42,10 @@ class PlaySoundsViewController: UIViewController {
     
     @IBOutlet weak var remainTimeLabel:UILabel!
     @IBOutlet weak var durationProgreeeBar:UIProgressView!
-    @IBOutlet weak var playButton: UIButton!
-    @IBOutlet weak var customSwitch: UISwitch!
-    @IBOutlet weak var buttonStackView: UIStackView!
-    @IBOutlet weak var customStackView: UIStackView!
     
-    // slider 2 switch 2
+    @IBOutlet weak var customStackView: UIStackView!
+    @IBOutlet weak var customPlayButton: UIButton!
+    @IBOutlet weak var customSwitch: UISwitch!
     @IBOutlet weak var rateSlider: UISlider!
     @IBOutlet weak var pitchSlider: UISlider!
     @IBOutlet weak var echoSwitch: UISwitch!
@@ -94,14 +92,14 @@ class PlaySoundsViewController: UIViewController {
     
     
     @IBAction func customSwichChange(_ sender: UISwitch){
-        print(customSwitch.isOn)
         
         if customSwitch.isOn {
-            playButton.isEnabled = true
+            customPlayButton.isEnabled = true
             buttonStackView.isHidden = true
             customStackView.isHidden = false
+            
         }else {
-            playButton.isEnabled = false
+            customPlayButton.isEnabled = false
             buttonStackView.isHidden = false
             customStackView.isHidden = true
         }
@@ -111,7 +109,6 @@ class PlaySoundsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAudio()
-//        print(recordedAudioURL)
 
         // Do any additional setup after loading the view.
     }
@@ -121,8 +118,8 @@ class PlaySoundsViewController: UIViewController {
         configureUI(.notPlaying)
         
         durationProgreeeBar.progress = 0
-        customSwitch.isOn = false
-        playButton.isEnabled = false
+        customPlayButton.isEnabled = false
         customStackView.isHidden = true
+        customPlayButton.isEnabled = false
     }
 }
