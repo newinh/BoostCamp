@@ -10,7 +10,7 @@
  - [x] Lesson2 AutoLayout & Buttons (12/31)
  - [x] Lesson3 ViewController and Multiple Views (1/3)
  - [x] Lesson4 Delegation and recording (1/10)
- - [ ] Lesson5 Playback and Effects
+ - [x] Lesson5 Playback and Effects (1/11)
 
 ### - UIkit Fundamentals [[링크]](https://www.udacity.com/course/uikit-fundamentals--ud788) ( 1/15 ~ 1/28)
 

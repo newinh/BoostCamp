@@ -113,6 +113,40 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
         
         // play the recording!
         audioPlayerNode.play()
+        
+        
+        // duration 구하긔!
+        let nodeTime = audioPlayerNode.lastRenderTime!
+        let playerTime = audioPlayerNode.playerTime(forNodeTime: nodeTime)!
+
+        
+        var duration : TimeInterval
+        if let rate = rate {
+            duration = Double(audioFile.length - playerTime.sampleTime) / (playerTime.sampleRate * Double(rate) )
+        }else{
+            duration = Double(audioFile.length - playerTime.sampleTime) / (playerTime.sampleRate)
+        }
+
+        remainTime = duration
+        self.printTimer = Timer(timeInterval: 0.1, target: self, selector: #selector(PlaySoundsViewController.printTime), userInfo: nil, repeats: true)
+        RunLoop.main.add(self.printTimer, forMode: RunLoopMode.defaultRunLoopMode)
+        
+        
+    }
+    
+    func printTime(){
+        
+        remainTime -= 0.1
+        if remainTime <= 0{
+            printTimer.invalidate()
+            remainTimeLabel.text = "0:0"
+            return
+        }
+        
+        let intRemainTime = Int(remainTime * 10)
+        
+        remainTimeLabel.text = "\(intRemainTime / 10):\(intRemainTime % 10)"
+        
     }
     
     func stopAudio() {
@@ -130,6 +164,11 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
         if let audioEngine = audioEngine {
             audioEngine.stop()
             audioEngine.reset()
+        }
+        
+        if let printTimer = printTimer {
+            printTimer.invalidate()
+            remainTimeLabel.text = "0:0s"
         }
     }
     
@@ -168,4 +207,6 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
         alert.addAction(UIAlertAction(title: Alerts.DismissAlert, style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
+    
+    
 }

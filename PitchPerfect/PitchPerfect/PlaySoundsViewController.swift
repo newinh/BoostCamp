@@ -16,6 +16,10 @@ class PlaySoundsViewController: UIViewController {
     var audioEngine: AVAudioEngine!
     var audioPlayerNode: AVAudioPlayerNode!
     var stopTimer: Timer!
+
+    var printTimer: Timer!
+    
+    var remainTime : TimeInterval = 0.0
     
     enum ButtonType: Int{
         case slow = 0, fast, chipmunk, vader, echo, reverb
@@ -30,6 +34,8 @@ class PlaySoundsViewController: UIViewController {
     @IBOutlet weak var echoButton: UIButton!
     @IBOutlet weak var reverbButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
+    
+    @IBOutlet weak var remainTimeLabel:UILabel!
     
     // Mark : Actions
     
