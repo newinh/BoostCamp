@@ -13,10 +13,11 @@
 - [x] [Lesson5](i5) Playback and Effects (1/11)
 
 [i1]:./Intro%20to%20iOS%20App%20Development%20with%20Swift/Lesson1%20Introduction%20&%20Xcode/
+[i2]:./Intro%20to%20iOS%20App%20Development%20with%20Swift/Lesson2%20AutoLayout%20&%20Buttons/
+[i3]:./Intro%20to%20iOS%20App%20Development%20with%20Swift/Lesson3%20ViewController%20and%20Multiple%20Views
+[i4]:./Intro%20to%20iOS%20App%20Development%20with%20Swift/Lesson4%20
+[i5]:./Intro%20to%20iOS%20App%20Development%20with%20Swift/Lesson5%20
 
-[i2]: https://asdfasdf  
-(i3): http://www.naer.com  
-i4 : http://www.naver.com
 
 ### - UIkit Fundamentals [[링크]](https://www.udacity.com/course/uikit-fundamentals--ud788) ( 1/15 ~ 1/28)
 
