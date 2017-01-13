@@ -12,7 +12,7 @@
 - [x] [Lesson4](i4) Delegation and recording (1/10)
 - [x] [Lesson5](i5) Playback and Effects (1/11)
 
-(i1):./Intro to iOS App Development with Swift./Lesson1 Introduction & Xcode./ReadMe.md
+[i1]:./Intro to iOS App Development with Swift./Lesson1 Introduction & Xcode./ReadMe.md
 
 ### - UIkit Fundamentals [[링크]](https://www.udacity.com/course/uikit-fundamentals--ud788) ( 1/15 ~ 1/28)
 
