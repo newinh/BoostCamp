@@ -7,12 +7,12 @@
 ### - Intro to iOS App Development with Swift [[링크]](https://www.udacity.com/course/intro-to-ios-app-development-with-swift--ud585) ( 12/28 ~ 1/14)
 
 - [x] [Lesson1][i1] Introduction & Xcode (12/28) 
-- [x] [Lesson2](i2) AutoLayout & Buttons (12/31)
+- [x] [Lesson2][i2] AutoLayout & Buttons (12/31)
 - [x] [Lesson3](i3) ViewController and Multiple Views (1/3)
 - [x] [Lesson4](i4) Delegation and recording (1/10)
 - [x] [Lesson5](i5) Playback and Effects (1/11)
 
-[i1]:./Introto%20iOS%20App%20Development%20with%20Swift/Lesson1%20Introduction%20&%20Xcode/ReadMe.md
+[i1]:./Intro%20to%20iOS%20App%20Development%20with%20Swift/Lesson1%20Introduction%20&%20Xcode/
 
 [i2]: https://asdfasdf  
 (i3): http://www.naer.com  
