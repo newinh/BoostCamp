@@ -12,7 +12,7 @@
 - [x] [Lesson4](i4) Delegation and recording (1/10)
 - [x] [Lesson5](i5) Playback and Effects (1/11)
 
-[i1]:./Intro\ to\ iOS\ App\ Development\ with\ Swift/Lesson1\ Introduction\ &\ Xcode/ReadMe.md
+[i1]:./Introto%20iOS%20App%20Development%20with%20Swift/Lesson1%20Introduction%20&%20Xcode/ReadMe.md
 
 [i2]: https://asdfasdf  
 (i3): http://www.naer.com  
