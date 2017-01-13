@@ -6,14 +6,17 @@
 
 ### - Intro to iOS App Development with Swift [[링크]](https://www.udacity.com/course/intro-to-ios-app-development-with-swift--ud585) ( 12/28 ~ 1/14)
 
-- [x] [Lesson1](i1) Introduction & Xcode (12/28) 
+- [x] [Lesson1][i1] Introduction & Xcode (12/28) 
 - [x] [Lesson2](i2) AutoLayout & Buttons (12/31)
 - [x] [Lesson3](i3) ViewController and Multiple Views (1/3)
 - [x] [Lesson4](i4) Delegation and recording (1/10)
 - [x] [Lesson5](i5) Playback and Effects (1/11)
 
-[i1]:./Intro to iOS App Development with Swift./Lesson1 Introduction & Xcode./ReadMe.md
-(i2) : https://www.naver.com
+[i1]:./Intro\ to\ iOS\ App\ Development\ with\ Swift/Lesson1\ Introduction\ &\ Xcode/ReadMe.md
+
+[i2]: https://asdfasdf  
+(i3): http://www.naer.com  
+i4 : http://www.naver.com
 
 ### - UIkit Fundamentals [[링크]](https://www.udacity.com/course/uikit-fundamentals--ud788) ( 1/15 ~ 1/28)
 
@@ -29,3 +32,7 @@
 - [ ] Lesson8 Protocols and Extensions
 - [ ] Lesson9 Closure Expressions
 
+[링크1][1] 과 [링크2][2].
+
+[1]: http://example.com/ "링크제목1"
+[2]: http://example.org/ "링크제목2"
