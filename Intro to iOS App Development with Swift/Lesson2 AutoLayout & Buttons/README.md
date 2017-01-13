@@ -3,7 +3,7 @@
 
 - AutoLayout
 - IBOutlet & IBAction
-![IBOutlet & IBAction] (https://github.com/newinh/Udacity/blob/master/Intro%20to%20iOS%20App%20Development%20with%20Swift/Lesson2/IBOutlet%26IBAction.png)
+![IBOutlet & IBAction] (./IBOutlet&IBAction.png)
 
 #### Understanding AutoLayout
 > Auto Layout dynamically calculates the size and position of all the views in your view hierarchy, based on constraints placed on those views. For example, you can constrain a button so that it is horizontally centered with an Image view and so that the button’s top edge always remains 8 points below the image’s bottom. If the image view’s size or position changes, the button’s position automatically adjusts to match. 

@@ -8,32 +8,37 @@
 
 - [x] [Lesson1][i1] Introduction & Xcode (12/28) 
 - [x] [Lesson2][i2] AutoLayout & Buttons (12/31)
-- [x] [Lesson3](i3) ViewController and Multiple Views (1/3)
-- [x] [Lesson4](i4) Delegation and recording (1/10)
-- [x] [Lesson5](i5) Playback and Effects (1/11)
+- [x] [Lesson3][i3] ViewController and Multiple Views (1/3)
+- [x] [Lesson4][i4] Delegation and recording (1/10)
+- [x] [Lesson5][i5] Playback and Effects (1/11)
 
 [i1]:./Intro%20to%20iOS%20App%20Development%20with%20Swift/Lesson1%20Introduction%20&%20Xcode/
 [i2]:./Intro%20to%20iOS%20App%20Development%20with%20Swift/Lesson2%20AutoLayout%20&%20Buttons/
 [i3]:./Intro%20to%20iOS%20App%20Development%20with%20Swift/Lesson3%20ViewController%20and%20Multiple%20Views
-[i4]:./Intro%20to%20iOS%20App%20Development%20with%20Swift/Lesson4%20
-[i5]:./Intro%20to%20iOS%20App%20Development%20with%20Swift/Lesson5%20
+[i4]:./Intro%20to%20iOS%20App%20Development%20with%20Swift/Lesson4%20Delegation%20and%20recording
+[i5]:./Intro%20to%20iOS%20App%20Development%20with%20Swift/Lesson5%20Playback%20and%20Effects
 
 
 ### - UIkit Fundamentals [[링크]](https://www.udacity.com/course/uikit-fundamentals--ud788) ( 1/15 ~ 1/28)
 
 ### - Swift Programming Syntax [[링크]](https://www.udacity.com/course/learn-swift-programming-syntax--ud902)
 
-- [x] Lesson1 Swift Basics (12/30)
-- [x] Lesson2 Optionals (1/3)
-- [x] Lesson3 Collections (1/4)
-- [x] Lesson4 Control Flow (1/4)
-- [x] Lesson5 Funcions (1/5)
-- [x] Lesson6 Classes, Properties, and Methods (1/6)
-- [x] Lesson7 Enums and Structs (1/8)
-- [ ] Lesson8 Protocols and Extensions
-- [ ] Lesson9 Closure Expressions
+- [x] [Lesson1][s1] Swift Basics (12/30)
+- [x] [Lesson2][s2] Optionals (1/3)
+- [x] [Lesson3][s3] Collections (1/4)
+- [x] [Lesson4][s4] Control Flow (1/4)
+- [x] [Lesson5][s5] Funcions (1/5)
+- [x] [Lesson6][s6] Classes, Properties, and Methods (1/6)
+- [x] [Lesson7][s7] Enums and Structs (1/8)
+- [ ] [Lesson8][s8] Protocols and Extensions
+- [ ] [Lesson9][s9] Closure Expressions
 
-[링크1][1] 과 [링크2][2].
-
-[1]: http://example.com/ "링크제목1"
-[2]: http://example.org/ "링크제목2"
+[s1]:./Learn%20Swift%20Syntax/Lesson1%20Swift%20Basics
+[s2]:./Learn%20Swift%20Syntax/Lesson2%20Optionals
+[s3]:./Learn%20Swift%20Syntax/Lesson3%20Collections
+[s4]:./Learn%20Swift%20Syntax/Lesson4%20Control%20Flow
+[s5]:./Learn%20Swift%20Syntax/Lesson5%20Functions
+[s6]:./Learn%20Swift%20Syntax/Lesson6%20Classes,%20Properties%20and%20Methods
+[s7]:./Learn%20Swift%20Syntax/Lesson7%20Enums%20and%20Structs
+[s8]:./Learn%20Swift%20Syntax/Lesson8%20Protocols%20and%20Extensions
+[s9]:./Learn%20Swift%20Syntax/Lesson9%20Closure%20Expressions
