@@ -19,7 +19,7 @@ enum Level {
     case high
 }
 
-class Teenager {
+class Teenager : Babysitter{
     var age: Int
     let responsible: Bool
     let patience: Level
@@ -29,12 +29,25 @@ class Teenager {
         self.responsible = responsible
         self.patience = patience
     }
+    
+    func playCandyland(_ numberOfTimes: Int){
+        print("played \(numberOfTimes) times")
+    }
+    
+    func read(_ book: String, firstLine: String, asleep: Bool) -> Bool {
+        return asleep
+    }
+
 }
 
 protocol Babysitter {
     func playCandyland(_ numberOfTimes: Int)
     func read(_ book: String, firstLine: String, asleep: Bool) -> Bool
 }
+
+let myBro = Teenager(age: 18, responsible: false, patience: .high)
+myBro.playCandyland(7)
+myBro.read("Lord of the Ring", firstLine: "1", asleep: true)
 
 
 //: __Problem 2__
@@ -59,16 +72,32 @@ protocol Adorable {
 
 var cuteMouse = UIImage(named: "mouseBall")
 
-class Animal { 
+class Animal : Adorable {
+    var size: Size
+    var softFur: Bool
+
     let species: String
     let numberOfLegs: Int
     
-    init(species: String, numberOfLegs: Int) {
+    init(species: String, numberOfLegs: Int, size: Size, softFur: Bool = false) {
         self.species = species
         self.numberOfLegs = numberOfLegs
+        self.size = size
+        self.softFur = softFur
+    }
+    
+    func frolick() {
+        
+    }
+    
+    func curlIntoSmallBall() {
+        
     }
 }
 var pic = UIImage(named: "frolick.jpg")
+let puppy = Animal(species: "chipmunk", numberOfLegs: 4, size: .tiny, softFur: false )
+puppy.frolick()
+puppy.curlIntoSmallBall()
 
 //: __Problem 3__
 //:
@@ -78,8 +107,14 @@ var pic = UIImage(named: "frolick.jpg")
 //: Based on what you see in the Friend class,  rewrite what you think would be in the Mover protocol.
 //:
 //: __3b.__ Edit the Friend class so that it adopts the Mover protocol.
+protocol Mover {
+    var reliability: Int { get }
+    
+    func carryCouch() -> String
+}
 
-class Friend {
+
+class Friend : Mover {
     var reliability: Int
     var likesYou: Bool
     
@@ -147,7 +182,8 @@ class Squirrel: Hoarder {
     
 }
 
-class ScrubJay {
+class ScrubJay: Hoarder {
+
     let wings = 2
     let female: Bool
     
@@ -157,6 +193,14 @@ class ScrubJay {
     
     func fly() -> String {
         return "Swoop!"
+    }
+    
+    func pilfer() -> String {
+        return "hayap!!"
+    }
+
+    func cache(_ foodItem: String) -> String {
+        return "\(foodItem) GET!"
     }
 }
 
@@ -203,6 +247,14 @@ class Minion {
         self.name =  name
     }
 }
+extension Minion : DirtyDeeds {
+    func cheat() {
+        print("cheat!")
+    }
+    func steal() {
+        print("steal!")
+    }
+}
 
 //: __Problem 6__
 //:
@@ -225,6 +277,24 @@ extension UIColor
     }
 }
 
+class UIColor {
+    
+    var red : CGFloat
+    var green : CGFloat
+    var blue : CGFloat
+    var alpha : CGFloat
+    
+    init(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
+        self.red = red
+        self.green = green
+        self.blue = blue
+        self.alpha = alpha
+    }
+    
+    func pistachio() -> UIColor{
+        return UIColor(redValue: 147, greenValue: 197, blueValue: 144)
+    }
+}
 
 
 

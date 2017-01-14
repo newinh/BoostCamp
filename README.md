@@ -30,7 +30,7 @@
 - [x] [Lesson5][s5] Funcions (1/5)
 - [x] [Lesson6][s6] Classes, Properties, and Methods (1/6)
 - [x] [Lesson7][s7] Enums and Structs (1/8)
-- [ ] [Lesson8][s8] Protocols and Extensions
+- [x] [Lesson8][s8] Protocols and Extensions (1/13)
 - [ ] [Lesson9][s9] Closure Expressions
 
 [s1]:./Learn%20Swift%20Syntax/Lesson1%20Swift%20Basics
