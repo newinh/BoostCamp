@@ -21,6 +21,22 @@
 
 ### - UIkit Fundamentals [[링크]](https://www.udacity.com/course/uikit-fundamentals--ud788) ( 1/15 ~ 1/28)
 
+- [ ] [Lesson1][i6] Outlets and Actions
+- [ ] [Lesson2][i7] View Presentations and Segues
+- [ ] [Lesson3][i8] The Delegate Pattern
+- [ ] [Lesson4][i9] Build v1.0 of MemeMe App
+- [ ] [Lesson5][i10] Table Views
+- [ ] [Lesson6][i11] Navigation
+- [ ] [Lesson7][i12] Complete the MemeMe App
+
+[i6]:./UIKit%20Fundamentals/1_Outlets_and_Actions/
+[i7]:./UIKit%20Fundamentals/2_View Presentations_and_Segues/
+[i8]:./UIKit%20Fundamentals/3_The_Delegate_Pattern/
+[i9]:./UIKit%20Fundamentals/4_Build_v1._ of_MemeMe_App/
+[i10]:./UIKit%20Fundamentals/5_Table_Views/
+[i11]:./UIKit%20Fundamentals/6_Navigation/
+[i12]:./UIKit%20Fundamentals/7_Complete_the_MemeMe_App/
+
 ### - Swift Programming Syntax [[링크]](https://www.udacity.com/course/learn-swift-programming-syntax--ud902)
 
 - [x] [Lesson1][s1] Swift Basics (12/30)
