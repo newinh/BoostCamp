@@ -74,8 +74,6 @@ var soups = ["tomato", "hot and sour", "french onion", "vegetable"]
 var alphabeticalSoups = soups.sorted(by: {(soup1: String, soup2: String) -> Bool in
     return soup2 > soup1
 })
-
-
 alphabeticalSoups
 
 

@@ -47,7 +47,7 @@
 - [x] [Lesson6][s6] Classes, Properties, and Methods (1/6)
 - [x] [Lesson7][s7] Enums and Structs (1/8)
 - [x] [Lesson8][s8] Protocols and Extensions (1/13)
-- [ ] [Lesson9][s9] Closure Expressions
+- [x] [Lesson9][s9] Closure Expressions
 
 [s1]:./Learn%20Swift%20Syntax/Lesson1%20Swift%20Basics
 [s2]:./Learn%20Swift%20Syntax/Lesson2%20Optionals
