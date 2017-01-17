@@ -38,6 +38,7 @@ class ChoiceViewController: UIViewController {
     private func getUserShape(_ sender: UIButton) -> Shape {
         // Titles are set to one of: Rock, Paper, or Scissors
         let shape = sender.title(for: UIControlState())!
+        print(sender.title(for: UIControlState())!)
         return Shape(rawValue: shape)!
     }
 }

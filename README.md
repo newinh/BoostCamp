@@ -13,7 +13,7 @@
 ### - UIkit Fundamentals [[링크]](https://www.udacity.com/course/uikit-fundamentals--ud788) ( 1/15 ~ 1/28)
 
 - [x] [Lesson1][i6] Outlets and Actions
-- [ ] [Lesson2][i7] View Presentations and Segues
+- [x] [Lesson2][i7] View Presentations and Segues
 - [ ] [Lesson3][i8] The Delegate Pattern
 - [ ] [Lesson4][i9] Build v1.0 of MemeMe App
 - [ ] [Lesson5][i10] Table Views
@@ -47,7 +47,7 @@
 
 
 
-### - Swift Programming Syntax [[링크]](https://www.udacity.com/course/learn-swift-programming-syntax--ud902)
+### - Swift Programming Syntax [[링크]](https://www.udacity.com/course/learn-swift-programming-syntax--ud902) ( 12/30 ~ 1/16 )
 
 - [x] [Lesson1][s1] Swift Basics (12/30)
 - [x] [Lesson2][s2] Optionals (1/3)
@@ -57,7 +57,7 @@
 - [x] [Lesson6][s6] Classes, Properties, and Methods (1/6)
 - [x] [Lesson7][s7] Enums and Structs (1/8)
 - [x] [Lesson8][s8] Protocols and Extensions (1/13)
-- [x] [Lesson9][s9] Closure Expressions
+- [x] [Lesson9][s9] Closure Expressions  (1/16)
 
 [s1]:./Learn%20Swift%20Syntax/Lesson1%20Swift%20Basics
 [s2]:./Learn%20Swift%20Syntax/Lesson2%20Optionals

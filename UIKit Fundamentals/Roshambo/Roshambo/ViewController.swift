@@ -8,18 +8,50 @@
 
 import UIKit
 
+enum Roshambo: Int {
+    case rock, scissors, paper
+}
+
 class ViewController: UIViewController {
+    
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    func rand() -> Int {
+        
+        return Int(arc4random() % 3 )
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func codeButtonPressed(_ sender: AnyObject)  {
+        
+        let controller : ResultViewController
+        controller = self.storyboard?.instantiateViewController(withIdentifier: "resultView") as! ResultViewController
+        
+        controller.me = Roshambo.rock
+        controller.you = Roshambo(rawValue: rand())
+        
+        self.present(controller, animated: true, completion: nil)
     }
-
+    
+    @IBAction func codeAndSegueButtonPressed(_ sender: AnyObject) {
+        performSegue(withIdentifier: "codeSegue", sender: self)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let controller = segue.destination as! ResultViewController
+        
+        if segue.identifier == "codeSegue" {
+            
+            controller.me = Roshambo.scissors
+            
+        }else {
+            controller.me = Roshambo.paper
+        }
+        
+        controller.you = Roshambo(rawValue: rand())
+        
+    }
 
 }
 

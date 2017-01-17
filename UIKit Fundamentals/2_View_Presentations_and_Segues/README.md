@@ -1,8 +1,10 @@
 # View Presentation and Segues
 
 새로운 내용의 콘텐츠를 화면에 보여주는 두가지 방법을 배워볼테다
+
 1. Navigation
 1. Modality
+
 오늘은 modal presentation!
 
 ## How does a view get presented modally
@@ -41,6 +43,8 @@ The app's Info.plist must contain an NSPhotoLibraryUsageDescription key with a s
 ```
 ![UIViewController](./UIViewController.png)
 
+
+
 - Alert View  
 ```swift
 @IBAction func experiment(){
@@ -58,7 +62,6 @@ The app's Info.plist must contain an NSPhotoLibraryUsageDescription key with a s
 }
 
 ```
-`
 ![AlertView](./AlertView.png)
 
 ## Dice example
@@ -113,7 +116,10 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
 
 
+## Challenge App: Roshambo
 
+3가지 방법을 뷰를 전환해보자!
+![Roshambo](./Roshambo.png)
 
 
 
