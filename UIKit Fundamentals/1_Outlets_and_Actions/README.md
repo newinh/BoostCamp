@@ -56,3 +56,9 @@ class ViewController: UIViewController {
 `
 
 위의 `incrementCount()`와 같은 메소드는 CallBack Method로 불리기도한다. (버튼의 코드를 바꾸는 것이아니라 controller의 코드를 이용하기때문에?) Action은 view에서 ViewController로 돌아오는 메소드이다. Outlet은 그 반대.
+
+
+> 1. An action is a method. An outlet is a property.
+1. Marking a variable as an IBOutlet makes it visible in Storyboard.
+1. A view in Storyboard needs an outlet if it needs to be modified programmatically.
+1. A view in Storyboard needs an action if it is expected to respond to user input.
