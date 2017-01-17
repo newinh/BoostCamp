@@ -12,7 +12,7 @@
 
 ### - UIkit Fundamentals [[링크]](https://www.udacity.com/course/uikit-fundamentals--ud788) ( 1/15 ~ 1/28)
 
-- [ ] [Lesson1][i6] Outlets and Actions
+- [x] [Lesson1][i6] Outlets and Actions
 - [ ] [Lesson2][i7] View Presentations and Segues
 - [ ] [Lesson3][i8] The Delegate Pattern
 - [ ] [Lesson4][i9] Build v1.0 of MemeMe App

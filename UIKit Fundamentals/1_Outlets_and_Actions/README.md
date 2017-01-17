@@ -6,6 +6,8 @@
 
 이번에는 StoryBoard를 사용하지 않고 위의 App을 만들거임ㅇㅇ
 
+*위와 같이 Object diagrama을 만드는 것을 추천해주신다!* 
+
 
 All View Controllers inherit a view property. 그래서 기본 ViewContoller는 기본View의 view 프로퍼티를 가지고있다. 그것을 이용해 `self.view.addSubview()`로 `label`과 `button`을 추가했다.
 
@@ -62,3 +64,12 @@ class ViewController: UIViewController {
 1. Marking a variable as an IBOutlet makes it visible in Storyboard.
 1. A view in Storyboard needs an outlet if it needs to be modified programmatically.
 1. A view in Storyboard needs an action if it is expected to respond to user input.
+
+
+
+
+
+
+
+
+
