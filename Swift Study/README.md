@@ -7,5 +7,5 @@
 ![Swift Programming](./textbook.jpg)
 
 
-9 [Struct and Class](./Struct_and_Class)
+9 [Struct and Class](./Struct_and_Class)  
 13 [Closure](./Closure)
