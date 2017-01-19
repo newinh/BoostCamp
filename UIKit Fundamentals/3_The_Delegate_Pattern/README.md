@@ -30,7 +30,7 @@ an object that executes a group of methods on behalf of another object
 
 
 # Challenge App
-예제 3-1 App을 아
+예제 3-1 App을 아래의 조건이 만족하도록 수정해보자!
 
 Here is a breakhallenge App:
 
