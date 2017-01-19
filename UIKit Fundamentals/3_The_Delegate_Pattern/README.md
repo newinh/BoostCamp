@@ -67,10 +67,10 @@ class ZipCodeTextFieldDelegate: NSObject, UITextFieldDelegate {
 
 두번째 텍스트필드 델리게이트 클래스를 만드는 데 애먹었다ㅜㅠ
 삽질한 내역  
-1. String의 Index를 이해하지 못햇다.  
+ 1. String의 Index를 이해하지 못햇다.  
 String이나 CharacterSet을 조작할 때, 배열의 Index로 접근하려했는데 String.Index 인스턴스를 이용해서 접근해야했다. Swift의 Array는 사실 연결List를 이용해서 만든 것처럼 기존 내가 알던 C나 Java에서 처럼 배열의 인덱스를 이용해서 접근하는 개념이 아닌가부다.
 
-1. 반 개방 범위 연산자(Half-Open Range Operator)  
+ 1. 반 개방 범위 연산자(Half-Open Range Operator)  
  `a..<b`는 는 지원하지만 `a<..b`나 `a<..<b`따위는 지원하지 않는다.ㅋ,ㅋ
 
 
