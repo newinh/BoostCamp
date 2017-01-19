@@ -29,15 +29,91 @@ an object that executes a group of methods on behalf of another object
 ![Diagramming the Text Field App2](./Diagramming the Text Field App2.png)
 
 
-# Challenge Apps
-예제 3-1 App을 아래조건이 만족하도록 해보자!
+# Challenge App
+예제 3-1 App을 아
 
-Here is a breakdown of the requirements for the Challenge App:
+Here is a breakhallenge App:
 
-- Zip code field. A text field that allows only digits, and a maximum of five characters.  
-- Cash text field. A dollar sign field that begins with the text $0.00, and then fills in the dollar figure as digits are added. For example, typing 4-2-7-5 would produce $0.00, $0.04, $0.42, $4.27, $42.75.  
-- Lockable text field. This is composed of a text field and a switch. When the switch is on, the text field can be edited. When the switch is off, the text field cannot be edited.  
+- Zip code fieligits, and a maximum of five charac
+- Cash text fies with the text $0.00, and then fi are added. For example, typing 4-2-.42, $4.27, $42.75.  
+- Lockable text field and a switch. When the switch d. When the switch is off, the te
 
+
+```swift
+// 첫번째 TextFiled
+class ZipCodeTextFieldDelegate: NSObject, UITextFieldDelegate {
+
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+
+    /*
+        textField 는 수정되기 `전`의 TextField를 가리킨다.
+        range.location은 수정이 시작되는 위치. (0부터 센다.)
+
+        수정되기전에 5글자가 있는 상태에서, 6번째 위치에 글자를 추가하는 경우에 수정을 허락하지 않는다.
+
+
+        (count는 갯수를 나타내고
+        location은 string의 위치를 0부터 세서 좀 헷갈린다😝)
+    */
+
+    if (textField.text?.characters.count)! > 4  && range.location > 4{
+        return false
+    }
+        return true
+    }
+}
+
+```
+
+두번째 텍스트필드 델리게이트 클래스를 만드는 데 애먹었다ㅜㅠ
+삽질한 내역
+1. String의 Index를 이해하지 못햇다.  
+String이나 CharacterSet을 조작할 때, 배열의 Index로 접근하려했는데 String.Index 인스턴스를 이용해서 접근해야했다.
+
+1. 반 개방 범위 연산자(Half-Open Range Operator)  
+ `a..<b`는 는 지원하지만 `a<..b`나 `a<..<b`따위는 지원하지 않는다.ㅋ,ㅋ
+
+
+```swift
+// 두번째 
+func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+
+    // 숫자 or delete만 입력되는 것으로 가정
+    // textField.text : $13.40 꼴
+
+    var oldText : String = textField.text ?? ""
+    if oldText.isEmpty {
+        oldText = "$00.00"
+    }
+
+    let commaIndex = oldText.characters.index(of: ".")!
+    let startIndex = oldText.index(oldText.startIndex, offsetBy: 1)
+
+    var dollarString : String = oldText.substring(with: startIndex ..< commaIndex)
+    var centString : String = oldText.substring(from: oldText.index(after: commaIndex))
+
+    if let _ = Int(string){
+        let moveString = String(centString.characters.removeFirst())
+        dollarString = dollarString + moveString
+        centString += string
+    }else {
+        let moveString = String(dollarString.characters.removeLast())
+        centString = moveString + centString
+        centString.characters.removeLast()
+    }
+
+
+    if dollarString.characters.count < 2 {
+        dollarString = "0" + dollarString
+    }else if dollarString.characters.index(of: "0") == dollarString.startIndex {
+        dollarString.characters.removeFirst()
+    }
+
+    textField.text = "$\(dollarString).\(centString)"
+
+    return false
+}
+```
 
 
 

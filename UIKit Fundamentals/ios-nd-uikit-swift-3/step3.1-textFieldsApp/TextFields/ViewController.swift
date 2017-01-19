@@ -17,11 +17,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var textField2: UITextField!
     @IBOutlet weak var textField3: UITextField!
     @IBOutlet weak var characterCountLabel: UILabel!
+    @IBOutlet weak var mySwitch :UISwitch!
     
     // MARK: Text Field Delegate objects
     let emojiDelegate = EmojiTextFieldDelegate()
     let colorizerDelegate = ColorizerTextFieldDelegate()
     let randomColorizerDelegate = RandomColorizerTextFieldDelegate()
+    let zipCodeDelegate = ZipCodeTextFieldDelegate()
+    let cashDelegate = CashTextFieldDelegate()
     
     // MARK: Life Cycle
     
@@ -32,15 +35,23 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.characterCountLabel.isHidden = true
         
         // Set the three delegates
-        self.textField1.delegate = emojiDelegate
+//        self.textField1.delegate = emojiDelegate
 //        self.textField2.delegate = colorizerDelegate
-        self.textField2.delegate = randomColorizerDelegate
+//        self.textField2.delegate = randomColorizerDelegate
+        
+        self.textField1.delegate = zipCodeDelegate
+        self.textField2.delegate = cashDelegate
         self.textField3.delegate = self
+        
     }
     
     // MARK: Text Field Delegate Methods
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        if mySwitch.isOn == false {
+            return false
+        }
 
         // Figure out what the new text will be, if we return true
         var newText = textField.text! as NSString
