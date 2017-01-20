@@ -14,8 +14,8 @@
 
 - [x] [Lesson1][i6] Outlets and Actions
 - [x] [Lesson2][i7] View Presentations and Segues
-- [ ] [Lesson3][i8] The Delegate Pattern
-- [ ] [Lesson4][i9] Build v1.0 of MemeMe App
+- [x] [Lesson3][i8] The Delegate Pattern
+- [x] [Lesson4][i9] Build v1.0 of MemeMe App
 - [ ] [Lesson5][i10] Table Views
 - [ ] [Lesson6][i11] Navigation
 - [ ] [Lesson7][i12] Complete the MemeMe App
