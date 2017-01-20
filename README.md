@@ -6,8 +6,8 @@
 
 ### - Swift Study
 
-- Struct and Class
-- Closure
+- [Struct and Class] (./Swift%20Study/Struct_and_Class/)
+- [Closure] (././Swift%20Study/Closure/)
 
 
 ### - UIkit Fundamentals [[링크]](https://www.udacity.com/course/uikit-fundamentals--ud788) ( 1/15 ~ 1/28)

@@ -5,7 +5,8 @@
 1. Navigation
 1. Modality
 
-오늘은 modal presentation!
+오늘은 modal presentation!  
+그리고 ActivityView, AlertView, UIImagePickerView를 호출하는 걸 해본다.
 
 ## How does a view get presented modally
 첫번째 인자는 보고자 하는 ViewController의 참조이다.
