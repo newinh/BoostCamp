@@ -84,6 +84,7 @@
                         <outlet property="bottomTextField" destination="c7V-Ug-4Mi" id="wGK-A4-eWj"/>
                         <outlet property="cameraButton" destination="F5Y-bU-X3f" id="lLK-kR-UMJ"/>
                         <outlet property="imagePickerView" destination="fwf-2b-d2o" id="6ru-jY-bWz"/>
+                        <outlet property="saveButton" destination="eUh-p9-Srd" id="VFF-FN-XuG"/>
                         <outlet property="shareButton" destination="SkG-jm-WFw" id="AAp-1e-D34"/>
                         <outlet property="toolbar" destination="oIq-MQ-L9q" id="3hW-WG-PRb"/>
                         <outlet property="topTextField" destination="NwZ-Jk-YSi" id="1eC-gg-I73"/>

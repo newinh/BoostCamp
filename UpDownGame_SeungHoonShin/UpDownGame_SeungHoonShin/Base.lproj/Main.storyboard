@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UpDownGame_SeungHoonShin" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="입력하세요" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="SlF-XN-PwE">
+                                <rect key="frame" x="147" y="318" width="82" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="XHP-2u-btW"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bxw-ch-uiS">
+                                <rect key="frame" x="259" y="318" width="30" height="30"/>
+                                <state key="normal" title="확인"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MxH-6s-ATL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안내 문구" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rn8-AO-HMI">
+                                <rect key="frame" x="155.5" y="272.5" width="63.5" height="20.5"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="O7t-I8-JX8">
+                                <rect key="frame" x="167" y="35" width="42" height="229.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNu-9k-uAS">
+                                        <rect key="frame" x="0.0" y="0.0" width="42" height="229.5"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Label">
+                                                <attributes>
+                                                    <font key="NSFont" metaFont="system" size="17"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Xsl-dm-jom">
+                                <rect key="frame" x="0.0" y="370" width="375" height="289"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GLY-bJ-v88">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="289"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SlF-XN-PwE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3QR-Pa-Jhv"/>
+                            <constraint firstItem="Xsl-dm-jom" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="7uP-Mq-01K"/>
+                            <constraint firstItem="Bxw-ch-uiS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HYW-4a-5ou"/>
+                            <constraint firstItem="Xsl-dm-jom" firstAttribute="top" secondItem="SlF-XN-PwE" secondAttribute="bottom" constant="22" id="KOx-fw-82M"/>
+                            <constraint firstItem="Rn8-AO-HMI" firstAttribute="top" secondItem="O7t-I8-JX8" secondAttribute="bottom" constant="8" id="NBp-7L-IBH"/>
+                            <constraint firstItem="O7t-I8-JX8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rra-Y8-7eS"/>
+                            <constraint firstItem="SlF-XN-PwE" firstAttribute="top" secondItem="Rn8-AO-HMI" secondAttribute="bottom" constant="25" id="T2g-sk-lk8"/>
+                            <constraint firstItem="Rn8-AO-HMI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eB0-zq-bfS"/>
+                            <constraint firstItem="O7t-I8-JX8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="hkU-vL-L3g"/>
+                            <constraint firstItem="Bxw-ch-uiS" firstAttribute="leading" secondItem="SlF-XN-PwE" secondAttribute="trailing" constant="30" id="kyi-WQ-xmJ"/>
+                            <constraint firstItem="SlF-XN-PwE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="q6y-lX-YSL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Xsl-dm-jom" secondAttribute="bottom" constant="8" id="qj5-vh-YPT"/>
+                            <constraint firstItem="Xsl-dm-jom" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="y9f-42-WE6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="guideText" destination="Rn8-AO-HMI" id="udr-HS-G6K"/>
+                        <outlet property="inputText" destination="SlF-XN-PwE" id="4Au-PB-c7h"/>
+                        <outlet property="rangeText" destination="HNu-9k-uAS" id="7BT-QF-Bra"/>
+                        <outlet property="resultImageView" destination="GLY-bJ-v88" id="cT9-ky-k0R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

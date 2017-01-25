@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Photos
 
 struct Meme {
     let topText : String
@@ -15,7 +16,8 @@ struct Meme {
     let memedImage: UIImage
 }
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate{
+class ViewController: UIViewController, UIImagePickerControllerDelegate,
+    UINavigationControllerDelegate, UITextFieldDelegate {
 
     // MARK: IBOutlet
     @IBOutlet weak var imagePickerView: UIImageView!
@@ -24,11 +26,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var bottomTextField: UITextField!
     @IBOutlet weak var shareButton: UIBarButtonItem!
     @IBOutlet weak var toolbar: UIToolbar!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    
     
     // MARK: ViewController
     override func viewDidLoad() {
         super.viewDidLoad()
-        topTextField.text = "TOP"
+        
+        topTextField.text = "\(PHPhotoLibrary.authorizationStatus())"
         bottomTextField.text = "BOTTOM"
         
         topTextField.textAlignment = NSTextAlignment.center
@@ -38,20 +43,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         bottomTextField.textColor = UIColor.white
         
         let memeTextAttributes:[String:Any] = [
-            NSForegroundColorAttributeName : UIColor.brown,
+            NSForegroundColorAttributeName : UIColor.white,
             NSStrokeColorAttributeName : UIColor.black,    // outline
             NSFontAttributeName : UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-            NSStrokeWidthAttributeName : 8 ]
-        
-        let testTextAttributes: [String:Any] = [
-            NSForegroundColorAttributeName : UIColor.white,
-            NSFontAttributeName : UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-//            NSStrokeColorAttributeName : UIColor.black,    // outline
-//            NSStrokeWidthAttributeName : 3,
-        ]
+            NSStrokeWidthAttributeName : -8 ]
     
         topTextField.defaultTextAttributes = memeTextAttributes
-        bottomTextField.defaultTextAttributes = testTextAttributes
+        bottomTextField.defaultTextAttributes = memeTextAttributes
         
         topTextField.delegate = self
         bottomTextField.delegate = self
@@ -63,8 +61,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         if let _ = imagePickerView.image {
             shareButton.isEnabled = true
+            saveButton.isEnabled = true
         }else {
             shareButton.isEnabled = false
+            saveButton.isEnabled = false
         }
     }
     override func viewWillDisappear(_ animated: Bool) {
