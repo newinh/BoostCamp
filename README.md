@@ -16,8 +16,8 @@
 - [x] [Lesson2][i7] View Presentations and Segues
 - [x] [Lesson3][i8] The Delegate Pattern
 - [x] [Lesson4][i9] Build v1.0 of MemeMe App
-- [ ] [Lesson5][i10] Table Views
-- [ ] [Lesson6][i11] Navigation
+- [x] [Lesson5][i10] Table Views
+- [x] [Lesson6][i11] Navigation
 - [ ] [Lesson7][i12] Complete the MemeMe App
 
 [i6]:./UIKit%20Fundamentals/1_Outlets_and_Actions/

@@ -9,3 +9,4 @@
 
 9 [Struct and Class](./Struct_and_Class)  
 13 [Closure](./Closure)
+18 [Inheritance](./Inheritance)
