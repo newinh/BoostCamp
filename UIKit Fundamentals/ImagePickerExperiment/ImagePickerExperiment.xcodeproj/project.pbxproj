@@ -12,6 +12,7 @@
 		78B4EF951E31E6AE00E5C566 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78B4EF931E31E6AE00E5C566 /* Main.storyboard */; };
 		78B4EF971E31E6AE00E5C566 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78B4EF961E31E6AE00E5C566 /* Assets.xcassets */; };
 		78B4EF9A1E31E6AE00E5C566 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78B4EF981E31E6AE00E5C566 /* LaunchScreen.storyboard */; };
+		78D7CC0B1E3BEA490067BD91 /* SentMemesCollectionCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D7CC0A1E3BEA490067BD91 /* SentMemesCollectionCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		78B4EF961E31E6AE00E5C566 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78B4EF991E31E6AE00E5C566 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		78B4EF9B1E31E6AE00E5C566 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78D7CC0A1E3BEA490067BD91 /* SentMemesCollectionCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentMemesCollectionCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				78B4EF961E31E6AE00E5C566 /* Assets.xcassets */,
 				78B4EF981E31E6AE00E5C566 /* LaunchScreen.storyboard */,
 				78B4EF9B1E31E6AE00E5C566 /* Info.plist */,
+				78D7CC0A1E3BEA490067BD91 /* SentMemesCollectionCollectionViewController.swift */,
 			);
 			path = ImagePickerExperiment;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			files = (
 				78B4EF921E31E6AE00E5C566 /* ViewController.swift in Sources */,
 				78B4EF901E31E6AE00E5C566 /* AppDelegate.swift in Sources */,
+				78D7CC0B1E3BEA490067BD91 /* SentMemesCollectionCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +303,7 @@
 				78B4EFA01E31E6AE00E5C566 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -35,7 +35,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
-        if gameManager == nil {
+        if gameManager == nil  {
             // 새로운 게임 생성
             gameManager = makeUpDownGame(num: inputNumber)
             

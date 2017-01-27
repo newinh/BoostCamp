@@ -33,7 +33,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate,
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        topTextField.text = "\(PHPhotoLibrary.authorizationStatus())"
+        topTextField.text = "TOP"
         bottomTextField.text = "BOTTOM"
         
         topTextField.textAlignment = NSTextAlignment.center
@@ -53,11 +53,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate,
         
         topTextField.delegate = self
         bottomTextField.delegate = self
+        
+        imagePickerView.fit
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        subscribeToKeyboardNotifications()
+        subscribeToKeyboardNotifications()
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
+        super.viewDidLoad()
         
         if let _ = imagePickerView.image {
             shareButton.isEnabled = true
@@ -69,7 +72,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate,
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-//        unsubscribeFromKeyboardNotifications()
+        unsubscribeFromKeyboardNotifications()
     }
     
     // MARK: IBAction
@@ -154,6 +157,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate,
         let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imagePickerView.image!, memedImage:generateMemedImage())
         
         UIImageWriteToSavedPhotosAlbum(meme.memedImage, nil, nil, nil)
+        
+        let object = UIApplication.shared.delegate
+        let appDelegate = object as! AppDelegate
+        appDelegate.memes.append(meme)
     }
 
     func generateMemedImage() -> UIImage {

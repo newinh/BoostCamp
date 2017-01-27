@@ -18,7 +18,9 @@
 - [x] [Lesson4][i9] Build v1.0 of MemeMe App
 - [x] [Lesson5][i10] Table Views
 - [x] [Lesson6][i11] Navigation
-- [ ] [Lesson7][i12] Complete the MemeMe App
+- [x] [Lesson7][i12] Complete the MemeMe App
+
+Table view 부터는 기록을 남기지 못했다
 
 [i6]:./UIKit%20Fundamentals/1_Outlets_and_Actions/
 [i7]:./UIKit%20Fundamentals/2_View_Presentations_and_Segues/

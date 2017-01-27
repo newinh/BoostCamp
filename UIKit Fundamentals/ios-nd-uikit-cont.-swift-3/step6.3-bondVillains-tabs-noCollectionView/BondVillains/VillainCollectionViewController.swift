@@ -14,10 +14,26 @@ import UIKit
 class VillainCollectionViewController: UICollectionViewController {
     
     // MARK: Properties
+
+    @IBOutlet weak var flowLayout : UICollectionViewFlowLayout!
     
     // Get ahold of some villains, for the table
     // This is an array of Villain instances
     let allVillains = Villain.allVillains
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let space: CGFloat = 3.0
+        let dimension: CGFloat  = (view.frame.size.width - (2 * space) ) / 3.0
+        
+        flowLayout.minimumInteritemSpacing = space
+        flowLayout.minimumLineSpacing = space
+        flowLayout.itemSize = CGSize(width: dimension, height: dimension)
+        
+        flowLayout.scrollDirection = .horizontal
+        
+    }
     
     // MARK: Life Cycle
     
@@ -36,7 +52,6 @@ class VillainCollectionViewController: UICollectionViewController {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VillainCollectionViewCell", for: indexPath) as! VillainCollectionViewCell
         let villain = self.allVillains[(indexPath as NSIndexPath).row]
-        
         // Set the name and image
         //cell.nameLabel.text = villain.name
         cell.villainImageView?.image = UIImage(named: villain.imageName)
