@@ -54,7 +54,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate,
         topTextField.delegate = self
         bottomTextField.delegate = self
         
-        imagePickerView.fit
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
