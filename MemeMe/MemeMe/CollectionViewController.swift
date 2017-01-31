@@ -68,7 +68,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     
-    // sizeSlider의 값이 변하게되면 cell의 크기를 변경
+    // MARK: KICK! sizeSlider의 값이 변하게되면 cell의 크기를 변경
     @IBAction func sizeValueChanged() {
         
         let newDimension = CGFloat(sizeSlider.value)
