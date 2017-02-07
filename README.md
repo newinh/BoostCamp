@@ -4,6 +4,8 @@
 
 ![BoostCamp Logo](./bc_img.png)
 
+### 2차프로젝트 진행중!
+
 ### - Swift Study
 
 - [Struct and Class] (./Swift%20Study/Struct_and_Class/)
