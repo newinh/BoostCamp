@@ -13,10 +13,10 @@
 
 ### - iOS Persistence and Core Data [[링크]](https://www.udacity.com/course/ios-persistence-and-core-data--ud325)
 
-- [x] [Lesson1] Simple Persistence  (2/17)
-- [ ] [Lesson2] iOS File System and Sanboxing
-- [ ] [Lesson3] Core Data (Part1)
-- [ ] [Lesson4] Core Data (Part1)
+- [x] [Lesson1] Simple Persistence  
+- [x] [Lesson2] iOS File System and Sanboxing
+- [x] [Lesson3] Core Data (Part1)
+- [x] [Lesson4] Core Data (Part1) (2/17)
 - [ ] [Lesson5] etc..
 
 
