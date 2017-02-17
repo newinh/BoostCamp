@@ -4,12 +4,30 @@
 
 ![BoostCamp Logo](./bc_img.png)
 
-### 2차프로젝트 진행중!
+### 2차프로젝트 진행중! [[ChromaTone]] (https://github.com/BoostCamp/ChromaTone)
 
 ### - Swift Study
 
 - [Struct and Class] (./Swift%20Study/Struct_and_Class/)
 - [Closure] (././Swift%20Study/Closure/)
+
+### - iOS Persistence and Core Data [[링크]](https://www.udacity.com/course/ios-persistence-and-core-data--ud325)
+
+- [x] [Lesson1] Simple Persistence  (2/17)
+- [ ] [Lesson2] iOS File System and Sanboxing
+- [ ] [Lesson3] Core Data (Part1)
+- [ ] [Lesson4] Core Data (Part1)
+- [ ] [Lesson5] etc..
+
+
+### - iOS Networking with Swift [[링크]](https://www.udacity.com/course/ios-networking-with-swift--ud421) 
+
+- [x] [Lesson1] Making a Network Request
+- [x] [Lesson2] Using Web Services and APIs
+- [x] [Lesson3] Chaining Asynchronous Requests
+- [ ] [Lesson4] Authenticating Requests
+- [ ] [Lesson5] Improving Networking with MVC
+- [ ] [Lesson6] Preparing for "On the Map"
 
 
 ### - UIkit Fundamentals [[링크]](https://www.udacity.com/course/uikit-fundamentals--ud788) ( 1/15 ~ 1/28)
