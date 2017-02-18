@@ -13,12 +13,17 @@
 
 ### - iOS Persistence and Core Data [[링크]](https://www.udacity.com/course/ios-persistence-and-core-data--ud325)
 
-- [x] [Lesson1] Simple Persistence  
-- [x] [Lesson2] iOS File System and Sanboxing
-- [x] [Lesson3] Core Data (Part1)
-- [x] [Lesson4] Core Data (Part1) (2/17)
-- [ ] [Lesson5] etc..
+- [x] [Lesson1][i14] Simple Persistence  
+- [x] [Lesson2][i15] iOS File System and Sanboxing
+- [x] [Lesson3][i16] Core Data (Part1)
+- [x] [Lesson4][i17] Core Data (Part1) (2/17)
+- [ ] [Lesson5][i18] etc..
 
+[i14]:./iOS%20Persistence%20and%20Core%20Data/Lesson1%20Simple%20Persistence
+[i15]:./iOS%20Persistence%20and%20Core%20Data/Lesson2%20iOS%20File%20System%20and%20Sandboxing
+[i16]:./iOS%20Persistence%20and%20Core%20Data/Lesson3%20Core%20Data%20(Part%201)
+[i17]:./iOS%20Persistence%20and%20Core%20Data/Lesson4%20Core%20Data%20(Part%202)
+[i18]:./iOS%20Persistence%20and%20Core%20Data/Lesson5%20Important ExtrasImportant%20Extras
 
 ### - iOS Networking with Swift [[링크]](https://www.udacity.com/course/ios-networking-with-swift--ud421) 
 
