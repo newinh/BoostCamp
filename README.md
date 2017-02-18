@@ -23,7 +23,7 @@
 [i15]:./iOS%20Persistence%20and%20Core%20Data/Lesson2%20iOS%20File%20System%20and%20Sandboxing
 [i16]:./iOS%20Persistence%20and%20Core%20Data/Lesson3%20Core%20Data%20(Part%201)
 [i17]:./iOS%20Persistence%20and%20Core%20Data/Lesson4%20Core%20Data%20(Part%202)
-[i18]:./iOS%20Persistence%20and%20Core%20Data/Lesson5%20Important ExtrasImportant%20Extras
+[i18]:./iOS%20Persistence%20and%20Core%20Data/Lesson5%20Important%20Extras
 
 ### - iOS Networking with Swift [[링크]](https://www.udacity.com/course/ios-networking-with-swift--ud421) 
 
